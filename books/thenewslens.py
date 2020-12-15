@@ -5,10 +5,10 @@ from base import BaseFeedBook # 继承基类BaseFeedBook
 
 # 返回此脚本定义的类名
 def getBook():
-    return ChinaDaily
+    return thenewslens
 
 # 继承基类BaseFeedBook
-class ChinaDaily(BaseFeedBook):
+class thenewslens(BaseFeedBook):
     # 设定生成电子书的元数据
     title = u'The News Lens 關鍵評論網' # 设定标题
     __author__ = u'The News Lens 關鍵評論網' # 设定作者
