@@ -14,7 +14,7 @@ class mynews(BaseFeedBook):
     __author__ = u'我的新聞' # 设定作者
     description = u'我的新聞. ' # 设定简介
     language = 'zh-TW' # 设定语言
-    deliver_times=[6,14,22] #6:00,14:00,22:00
+    deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
 
     # 指定要提取的包含文章列表的主题页面链接
