@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import re, datetime
- import urllib
- import json
- from bs4 import BeautifulSoup
- from lib.urlopener import URLOpener
- from base import BaseFeedBook
- from config import SHARE_FUCK_GFW_SRV
- from config import SHARE_SRV
+import urllib
+import json
+from bs4 import BeautifulSoup
+from lib.urlopener import URLOpener
+from base import BaseFeedBook
+from config import SHARE_FUCK_GFW_SRV
+from config import SHARE_SRV
 
 # 返回此脚本定义的类名
 def getBook():
