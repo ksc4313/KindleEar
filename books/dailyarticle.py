@@ -29,7 +29,6 @@ class dailyarticle(BaseFeedBook):
         dict(name='article', class_='post-article'),
         dict(name='article', class_='viewer_tl'),
         dict(name='article', id='MainContent_Contents_mainArticle'),
-        dict(name='main', role='main'),
         dict(name='div', class_='article_full'),
         dict(name='h1', class_='post-title'),
         dict(name='section', class_='content'),
