@@ -22,7 +22,7 @@ class bnext(BaseFeedBook):
     keep_only_tags = [
         dict(name='div', class_='col ctnBox'),
     ]
-    remove_classes = ['article_recommend_title','article_recommends','article_tags','mobile_share_block_sty02','add_bnext_line_block','rt_hot_news','fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop']
+    remove_classes = ['article_recommend_title','article_recommends','article_tags','mobile_share_block_sty02','add_bnext_line_block','mobile_share_block_sty02','mobile_share_block_sty01','rt_hot_news','fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
