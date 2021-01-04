@@ -23,7 +23,6 @@ class pts(BaseFeedBook):
         dict(name='div', class_='col-lg-8'),
         dict(name='article', class_='post-article'),
     ]
-    remove_classes = ['Google-special d-md-block','newsletter-subscribe','noteBar ga_trackEvent']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
