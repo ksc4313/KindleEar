@@ -23,7 +23,7 @@ class cw(BaseFeedBook):
         dict(name='div', class_='article__head'),
         dict(name='div', class_='article__body pt-d-40 pt-m-30 px20'),
     ]
-    remove_classes = ['breadcrumb list-reset','article__provideViews my20 mobile','ad text-center ad--300by250 cw__advertising ad--first','article__keyword mb30','article__share']
+    remove_classes = ['breadcrumb list-reset','article__provideViews my20 mobile','ad text-center ad--300by250 cw__advertising ad--first','article__keyword mb30','article__share','article__detail']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
