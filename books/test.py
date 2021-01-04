@@ -21,9 +21,6 @@ class test(BaseFeedBook):
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
-    keep_only_tags = [
-        dict(name='div', class_='article-main-box'),
-    ]
     
 
     # 指定要提取的包含文章列表的主题页面链接
@@ -31,3 +28,8 @@ class test(BaseFeedBook):
     feeds = [
         (u'The News Lens 關鍵評論網', 'https://feeds.feedburner.com/TheNewsLens?format=xml'),
     ]
+   if  "thenewslens"  in url:
+     keep_only_tags = [
+        dict(name='div', class_='article-header-container'),
+        dict(name='div', class_='article-main-box'),
+     ]
