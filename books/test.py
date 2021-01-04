@@ -25,7 +25,7 @@ class test(BaseFeedBook):
         dict(name='div', class_='article-main-box'),
         dict(name='article', class_='pageContent'),
         dict(name='div', class_='Single-article WebContent'),
-   remove_classes = ['Google-special d-md-block']
+    remove_classes = ['Google-special d-md-block']
 
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
