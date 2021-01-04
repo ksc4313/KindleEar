@@ -20,7 +20,7 @@ class PttHot(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
-        dict(name='div', id_='text'),
+        dict(name='div', class_='text_css'),
         
     ]
     remove_classes = ['rgt_box ml-md-5 ml-lg-10 col','tags','extend_post_box','text-center col','col-md-6 col-12','container']
