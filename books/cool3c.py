@@ -26,5 +26,5 @@ class cool3c(BaseFeedBook):
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
-        (u'癮科技 Cool3c', 'https://feeds.feedburner.com/cool3c-show?=format=xml'),
+        (u'癮科技 Cool3c', 'https://feeds.feedburner.com/cool3c-show?format=xml'),
     ]
