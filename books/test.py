@@ -21,7 +21,7 @@ class test(BaseFeedBook):
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
-     keep_only_tags = [
+    keep_only_tags = [
         dict(name='div', class_='article-main-box'),
     ]
     
