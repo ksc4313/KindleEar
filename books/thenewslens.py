@@ -12,9 +12,9 @@ def getBook():
 # 继承基类BaseFeedBook
 class thenewslens(BaseFeedBook):
     # 设定生成电子书的元数据
-    title = u'每日文章' # 设定标题
-    __author__ = u'每日文章' # 设定作者
-    description = u'每日文章' # 设定简介
+    title = u'thenewslens' # 设定标题
+    __author__ = u'thenewslens' # 设定作者
+    description = u'thenewslens' # 设定简介
     language = 'zh-TW' # 设定语言
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
