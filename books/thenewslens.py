@@ -7,10 +7,10 @@ from bs4 import BeautifulSoup # 导入BeautifulSoup处理模块
 
 # 返回此脚本定义的类名
 def getBook():
-    return dailyarticle
+    return thenewslens
 
 # 继承基类BaseFeedBook
-class dailyarticle(BaseFeedBook):
+class thenewslens(BaseFeedBook):
     # 设定生成电子书的元数据
     title = u'每日文章' # 设定标题
     __author__ = u'每日文章' # 设定作者
