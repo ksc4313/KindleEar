@@ -22,7 +22,8 @@ class sportsv(BaseFeedBook):
     keep_only_tags = [
         dict(name='div', class_='article_full'),
     ]
-    remove_classes = ['author_card']
+    remove_classes = ['author_card','infon','adv01','col-md-1 article_comment','pagination','tagcloud-list']
+    remove_ids = ['tags']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
