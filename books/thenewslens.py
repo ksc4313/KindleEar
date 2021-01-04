@@ -23,7 +23,7 @@ class thenewslens(BaseFeedBook):
         dict(name='div', class_='article-header-container'),
         dict(name='div', class_='article-main-box'),
     ]
-    remove_classes = ['article-infoBot-box','social-btns']
+    remove_classes = ['article-infoBot-box','social-btns','tags']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
