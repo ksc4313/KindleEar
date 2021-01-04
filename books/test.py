@@ -14,9 +14,9 @@ def getBook():
 # 继承基类BaseFeedBook
 class test(BaseFeedBook):
     # 设定生成电子书的元数据
-    title = u'我的新聞' # 设定标题
-    __author__ = u'我的新聞' # 设定作者
-    description = u'我的新聞. ' # 设定简介
+    title = u'test' # 设定标题
+    __author__ = u'test' # 设定作者
+    description = u'test. ' # 设定简介
     language = 'zh-TW' # 设定语言
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
