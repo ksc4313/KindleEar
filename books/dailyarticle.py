@@ -35,8 +35,7 @@ class dailyarticle(BaseFeedBook):
         dict(name='section', class_='content'),
         dict(name='article', class_='mainBox'),
         dict(name='div', class_='row'),
-        dict(name='h1', class_='post-title'),
-        dict(name='h1', class_='post-title'),
+        dict(name='div', class_='col ctnBox'),
     ]
     remove_classes = ['Google-special d-md-block','newsletter-subscribe','noteBar ga_trackEvent']
     # 指定要提取的包含文章列表的主题页面链接
@@ -52,5 +51,5 @@ class dailyarticle(BaseFeedBook):
         (u'T客邦', 'https://feeds.feedburner.com/techbang/daily?format=xml'),
         (u'地球圖輯隊', 'https://dq.yam.com/rss.php'),
         (u'癮科技 Cool3c', 'https://feeds.feedburner.com/cool3c-show?=format=xml),
-        
+        (u'數位時代 BusinessNext', 'https://www.bnext.com.tw/rss'),
     ]
