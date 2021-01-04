@@ -28,4 +28,3 @@ class techbang(BaseFeedBook):
     feeds = [
         (u'T客邦', 'https://feeds.feedburner.com/techbang/daily?format=xml'),
     ]
-© 2021 GitHub, Inc.
