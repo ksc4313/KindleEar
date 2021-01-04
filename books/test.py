@@ -9,14 +9,14 @@ from base import BaseFeedBook
 
 # 返回此脚本定义的类名
 def getBook():
-    return test
+    return test1
 
 # 继承基类BaseFeedBook
-class test(BaseFeedBook):
+class test1(BaseFeedBook):
     # 设定生成电子书的元数据
-    title = u'test' # 设定标题
-    __author__ = u'test' # 设定作者
-    description = u'test. ' # 设定简介
+    title = u'test1' # 设定标题
+    __author__ = u'test1' # 设定作者
+    description = u'test1 ' # 设定简介
     language = 'zh-TW' # 设定语言
     deliver_times=[2,10,18] #2:00,10:00,18:00
     fulltext_by_readability = False
