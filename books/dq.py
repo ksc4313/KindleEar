@@ -20,9 +20,11 @@ class dq(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
-        dict(name='article', class_='mainBox'),
+        dict(name='div', class_='innerContent'),
+        dict(name='div', class_='imgBox')
     ]
     remove_classes = ['adBox','repost','snsBar','postTagsBox tabsWrap',]
+    positive_classes = ['h1']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
