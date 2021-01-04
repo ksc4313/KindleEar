@@ -20,7 +20,8 @@ class Managertoday(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
-        dict(name='div', class_='my-rwd-container'),
+        dict(name='div', class_='view_top'),
+        dict(name='div', class_='PostHtmlView d-md-flex'),
     ]
     remove_classes = ['rgt_box ml-md-5 ml-lg-10 col','tags','extend_post_box','text-center col','col-md-6 col-12','container']
     # 指定要提取的包含文章列表的主题页面链接
