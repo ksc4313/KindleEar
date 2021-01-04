@@ -23,7 +23,7 @@ class Managertoday(BaseFeedBook):
         dict(name='div', class_='view_top'),
         dict(name='div', class_='PostHtmlView d-md-flex'),
     ]
-    remove_classes = ['rgt_box ml-md-5 ml-lg-10 col','tags','extend_post_box','text-center col','col-md-6 col-12','container']
+    remove_classes = ['rgt_box ml-md-5 ml-lg-10 col','tags','extend_post_box','text-center col','col-md-6 col-12','container','text-center col','share_box sticky']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
