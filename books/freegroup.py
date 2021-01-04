@@ -23,6 +23,7 @@ class freegroup(BaseFeedBook):
         dict(name='header', class_='entry-header'),
         dict(name='div', class_='entry-content'),
     ]
+    remove_classes = ['sharedaddy sd-sharing-enabled']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
