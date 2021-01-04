@@ -21,7 +21,7 @@ class test(BaseFeedBook):
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
     keep_image = True
-    positive_classes = ['article-img-container']
+    positive_classes = ['figure']
 
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
