@@ -21,7 +21,7 @@ class wsj(BaseFeedBook):
     fulltext_by_readability = False
     keep_only_tags = [
         dict(name='div', class_='wsj-article-headline-wrap'),
-        dict(name='div', class_='article-content'),
+        dict(name='div', class_='module'),
     ]
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
