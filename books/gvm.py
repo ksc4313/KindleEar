@@ -22,7 +22,7 @@ class gvm(BaseFeedBook):
     keep_only_tags = [
         dict(name='div', class_='main_conten'),
     ]
-    remove_classes = ['article-review','article-features','article-extended','keyWord article-keyword text-center','article-author','extendedReading','floating-share','article-share article-share__bottom']
+    remove_classes = ['article-review','article-features','article-extended','keyWord article-keyword text-center','article-author','extendedReading','floating-share','article-share article-share__bottom','article-publication']
     remove_ids = ['marketingChannelsEntry']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
