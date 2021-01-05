@@ -20,6 +20,8 @@ class bnext(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
+        dict(name='div', class_='article_title_box container-fluid'),
+        dict(name='div', class_='content htmlview'),
         dict(name='div', class_='col ctnBox'),
     ]
     remove_classes = ['article_recommend_title','article_recommends','article_tags','mobile_share_block_sty02','add_bnext_line_block','mobile_share_block_sty02','mobile_share_block_sty01','rt_hot_news','fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop']
