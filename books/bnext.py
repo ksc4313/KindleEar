@@ -21,7 +21,7 @@ class bnext(BaseFeedBook):
     fulltext_by_readability = False
     keep_only_tags = [
         dict(name='div', class_='content htmlview'),
-        dict(name='div', class_='col ctnBox'),
+        dict(name='div', id='top_pic'),
     ]
     remove_classes = ['article_recommend_title','article_recommends','article_tags','mobile_share_block_sty02','add_bnext_line_block','mobile_share_block_sty02','mobile_share_block_sty01','rt_hot_news','fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop','cate_box','sp_author collapse show','topic_view_slider_block']
     # 指定要提取的包含文章列表的主题页面链接
