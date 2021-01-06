@@ -22,7 +22,7 @@ class techbang(BaseFeedBook):
     keep_only_tags = [
         dict(name='div', class_='main-content'),
     ]
-    remove_classes = ['article-tags','comments','breadcrumbs','post-header-additional']
+    remove_classes = ['article-tags','comments','breadcrumbs','post-header-additional','block comment-area','author-list']
     remove_ids = ['facebook-comments']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
