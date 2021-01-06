@@ -20,7 +20,6 @@ class bnext(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
-        dict(name='div', class_='article_title_box container-fluid'),
         dict(name='div', class_='content htmlview'),
         dict(name='div', class_='col ctnBox'),
     ]
