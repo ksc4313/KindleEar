@@ -23,6 +23,7 @@ class businessweekly(BaseFeedBook):
         dict(name='article', class_='pageContent'),
         dict(name='section', class_='Single-title no-gutters'),
         dict(name='div', class_='Single-article WebContent'),
+        dict(name='div', class_='articlebody'),
     ]
     remove_classes = ['Google-special d-md-block','Single-tag-list d-xs-flex','Breadcrumb breadcrumb','d-xs-none d-md-block','Single-title-category col-lg-10']
     # 指定要提取的包含文章列表的主题页面链接
