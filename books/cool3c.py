@@ -22,8 +22,8 @@ class cool3c(BaseFeedBook):
     keep_only_tags = [
         dict(name='div', class_='container-fluid'),
     ]
-    remove_classes = ['row tag','row related','social-bar social-bar-sticky style-default','block recent-list type-related','block readmore row','info clearfix','social','block comment-area','author-list','row']
-    remove_ids = ['mc_embed_signup','comment-area-main-post_158979-0']
+    remove_classes = ['row tag','row related','social-bar social-bar-sticky style-default','block recent-list type-related','block readmore row','info clearfix','social','block comment-area','author-list']
+    remove_ids = ['mc_embed_signup']
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
