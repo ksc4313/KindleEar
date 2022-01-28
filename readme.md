@@ -24,7 +24,15 @@ Readme of english version refers to [Readme_EN.md](https://github.com/cdhigh/Kin
 
 3. 安装 [Python 2.7.x](https://www.python.org/downloads/)。  
 
-4. 安装 [GAE SDK](https://cloud.google.com/appengine/downloads)。  
+4. 安装 [GAE SDK](https://storage.cloud.google.com/cloud-sdk-release)，选择273之前的版本，比如下面几个链接。  
+    [google-cloud-sdk-273.0.0-windows-x86_64-bundled-python.zip](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-windows-x86_64-bundled-python.zip)
+    [google-cloud-sdk-273.0.0-darwin-x86.tar.gz](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-darwin-x86.tar.gz)
+    [google-cloud-sdk-273.0.0-darwin-x86_64.tar.gz](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-darwin-x86_64.tar.gz)
+    [google-cloud-sdk-273.0.0-linux-x86.tar.gz](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-linux-x86.tar.gz)
+    [google-cloud-sdk-273.0.0-linux-x86_64.tar.gz](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-linux-x86_64.tar.gz)
+    [google-cloud-sdk-273.0.0-windows-x86-bundled-python.zip](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-windows-x86-bundled-python.zip)
+    [google-cloud-sdk-273.0.0-windows-x86.zip](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-windows-x86.zip)
+    [google-cloud-sdk-273.0.0-windows-x86_64.zip](https://storage.googleapis.com/cloud-sdk-release/google-cloud-sdk-273.0.0-windows-x86_64.zip)
 
 5. 下载 [KindleEar](https://github.com/cdhigh/KindleEar/archive/master.zip) ，解压到一个特定的目录。
 
@@ -42,18 +50,16 @@ config.py          | DOMAIN      | 你申请的应用的域名        |
 7. 转到GAE SDK安装目录(默认为：*C:\Program Files\Google\google_appengine*) 
 
 8. 部署命令：  
-8.1 使用appcfg.py：  
-	* `c:\python27\python.exe appcfg.py update kindleear目录\app.yaml kindleear目录\module-worker.yaml`  
-	* `c:\python27\python.exe appcfg.py update kindleear目录`  
-
-8.2 使用gcloud：  
     * 删除app.yaml和module-worker.yaml开头的两行：application /  version  
     * `gcloud auth login`  
     * `gcloud config set project 你的ApplicationId`  
-    * `gcloud app deploy --version=1 KindleEar目录\app.yaml KindleEar目录\module-worker.yaml`  
+    * `gcloud app deploy --version=1 app.yaml module-worker.yaml`  
     * `gcloud app deploy --version=1 KindleEar目录`  
-    * [如果服务器没有正常创建数据库索引，可能需要手动执行如下语句]  
-      `gcloud datastore indexes create KindleEar目录\index.yaml`  
+    * [如果服务器没有正常创建数据库索引或定时任务，可能需要手动执行如下语句]  
+      `gcloud datastore indexes create index.yaml`
+      `gcloud app deploy --version=1 app.yaml queue.yaml`
+      `gcloud app deploy --version=1 app.yaml cron.yaml`
+      `gcloud app deploy --version=1 app.yaml dispatch.yaml`  
 
 9. 全部完成后就可以尝试打开域名：  
 *http://appid.appspot.com*  (appid是你申请的application名字)  
@@ -64,15 +70,9 @@ config.py          | DOMAIN      | 你申请的应用的域名        |
 **不建议使用GAE Launcher部署KindleEar，除非你知道怎么设置Extra Flags等参数。**
 
 # 简化的部署步骤（推荐）
-  假如你不想安装python和GAE SDK，则可以选择如下两种方法之一：  
-
-1. 参考代码库 <https://github.com/bookfere/KindleEar-Uploader> ，里面有详细的教程和服务器脚本，也很简单。  
-
-2. 使用本机脚本：  
-2.1 [下载KindleEar](https://github.com/cdhigh/KindleEar/archive/master.zip) 并解压（改目录名为KindleEar）。  
-2.2 [下载KindleEar-Uploader](https://drive.google.com/folderview?id=0ByRickMo9V_XNlJITzhYM3JOYW8&usp=sharing) 并解压。  
-3.3 将KindleEar目录放到Uploader目录下，双击uploader.bat即开始上传，根据提示输入你的相关信息即可，在第一次成功部署之后，适用uploader再次升级KindleEar则不需要再次输入。  
-**此uploader仅适用于Windows系统。**
+  假如你不想安装python和GAE SDK：  
+  参考代码库 <https://github.com/bookfere/KindleEar-Uploader> 和教程 <https://bookfere.com/post/19.html> 。  
+  这种方法直接在GAE后台的console窗口就可以实现部署。  
 
 # 许可协议
 KindleEar is licensed under the [AGPLv3](http://www.gnu.org/licenses/agpl-3.0.html) license.  
