@@ -18,11 +18,7 @@ class bbc(BaseFeedBook):
     language = 'zh-TW' # 设定语言
     deliver_times=[2,10,18] #2:00,10:00,18:00
     oldest_article=28800 #8*60*60
-    fulltext_by_readability = False
-    keep_only_tags = [
-        dict(name='div', class_='e1j2237y4 css-smisdi-GridComponent e57qer20'),
-    ]
-    remove_classes = ['e82toqd2 css-b7fr4s-SectionLabelWrapper e120qdcz1','e57qer20 css-ljwwcp-StoryPromoUl-GridComponent eom0ln52']
+    fulltext_by_readability = True
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
