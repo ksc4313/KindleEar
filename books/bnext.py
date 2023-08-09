@@ -46,7 +46,7 @@ class bnext(BaseFeedBook):
                 # 将页面内容转换成BeatifulSoup对象
                 soup = BeautifulSoup(result.content, 'lxml')
                 # 找出当前页面文章列表中所有文章条目
-                items = soup.find_all(name='data-v-046cb521', class_='col-sm-12 col-md-4 col-lg-4 col-12 BG-Col')
+                items = soup.find_all(name='div', class_='BG-Box px-4 mb-4')
                 # 循环处理每个文章条目
                 for item in items:
                     title = item.a.string # 获取文章标题
