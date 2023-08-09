@@ -21,7 +21,8 @@ class Managertoday(BaseFeedBook):
     fulltext_by_readability = False
     keep_only_tags = [
         dict(name='div', class_='view_top'),
-        dict(name='div', class_='PostHtmlView d-md-flex'),
+        dict(name='main', class_='htmlview mb-10'),
+        dict(name='h1', class_='text-xl font-semibold md:text-3xl inline-block px-5 md:px-0 my-3'),
     ]
     remove_classes = ['rgt_box ml-md-5 ml-lg-10 col','tags','extend_post_box','text-center col','col-md-6 col-12','container','text-center col','share_box sticky','d-flex editor_info py-1 mb-4 justify-space-between','v-chip v-chip--clickable v-chip--label v-chip--link theme--light v-size--default black white--text','row']
     # 指定要提取的包含文章列表的主题页面链接
