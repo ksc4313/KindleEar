@@ -22,7 +22,7 @@ class bnext(BaseFeedBook):
     # 指定要提取的包含文章列表的主题页面链接
     # 每个主题是包含主题名和主题页面链接的元组
     feeds = [
-        (u'數位時代 BusinessNext', 'https://www.bnext.com.tw/articles/p/1'),
+        (u'數位時代 BusinessNext', 'https://www.bnext.com.tw/'),
     ]
     # 设定内容页需要保留的标签
     keep_only_tags = [
@@ -46,7 +46,7 @@ class bnext(BaseFeedBook):
                 # 将页面内容转换成BeatifulSoup对象
                 soup = BeautifulSoup(result.content, 'lxml')
                 # 找出当前页面文章列表中所有文章条目
-                items = soup.find_all(name='div', class_='BG-Box px-4 mb-4')
+                items = soup.find_all(name='div', class_='MobileBox px-4')
                 # 循环处理每个文章条目
                 for item in items:
                     title = item.a.string # 获取文章标题
