@@ -20,7 +20,7 @@ class thenewslens(BaseFeedBook):
     oldest_article=28800 #8*60*60
     fulltext_by_readability = False
     keep_only_tags = [
-        dict(name='div', class_='article-header-container'),
+        dict(name='div', class_='container'),
         dict(name='div', class_='article-main-box'),
     ]
     remove_classes = ['article-infoBot-box','social-btns','tags','article-info']
