@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block titleTag -%}
+<title>{{ _("Login") }} - KindleEar</title>
+{% endblock -%}
+
+{% block header_loginfo -%}
+{% endblock %}
+
+{% block menubar -%}
+{% endblock -%}
+
+{% block content -%}
+<div class="main">
+  {% if tips -%}
+  <div class="notice-box">{{tips|safe}}</div>
+  {% endif -%}
+  {% if demoMode -%}
+  <div class="notice-box">{{_("You are in DEMO mode. Logging out will delete all data.")}}</div>
+  {% endif %}
+  <form action="" method="POST" class="pure-form pure-form-aligned">
+    <fieldset>
+      <legend>{{_("Login")}}</legend>
+      <div class="pure-control-group">
+        <label for="username">{{_("Username")}}</label>
+        <input name="username" type="text" {% if userName %}value="{{ userName }}"{% endif %} class="pure-u-1 pure-u-sm-1-2" autofocus />
+      </div>
+      <div class="pure-control-group">
+        <label for="password">{{_("Password")}}</label>
+        <input name="password" type="password" class="pure-u-1 pure-u-sm-1-2" />
+      </div>
+      <input type="hidden" name="next" value="{{next}}">
+      <div class="pure-control-group" style="text-align:center;">
+        <button type="submit" class="pure-button pure-button-primary pure-input-rounded">{{_("Login")}}</button>
+      </div>
+    </fieldset>
+  </form>
+  {% if not g.allowSignup -%}
+  <p style="color:grey;font-size:0.8em;text-align:center;">{{_("The website does not allow registration. You can ask the owner for an account.")}}</p>
+  {% endif %}
+</div>
+{% endblock -%}

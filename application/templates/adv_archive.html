@@ -1,0 +1,123 @@
+{% extends "adv_base.html" %}
+{% block titleTag -%}
+<title>{{ _("Archive") }} - KindleEar</title>
+{% endblock -%}
+
+{% block advcontent -%}
+{% set evernote = shareLinks.get('Evernote', {}) %}
+{% set wiz = shareLinks.get('Wiz', {}) %}
+{% set instapaper = shareLinks.get('Instapaper', {}) %}
+{% set pocket = shareLinks.get('Pocket', {}) %}
+{% set wallabag = shareLinks.get('wallabag', {}) %}
+<form class="pure-form" action="" method="POST">
+  <fieldset>
+    <legend>{{_("Archive")}}</legend>
+    <p><small>{{ _("Append hyperlinks for archiving or sharing.") }}</small></p>
+    <div class="pure-control-group">
+      <label for="enable_evernote" class="pure-checkbox">
+        <input id="enable_evernote" name="evernote" type="checkbox" 
+        {% if evernote.get('enable') %} checked="1" {% endif %} />
+        {{appendStrs['Evernote']}}
+      </label>
+      <input type="text" name="evernote_mail" placeholder="@m.evernote.com" value="{{evernote.get('email', '')}}" class="pure-u-1" />
+    </div>
+
+    <div class="pure-control-group">
+      <label for="enable_wiz" class="pure-checkbox">
+        <input id="enable_wiz" name="wiz" type="checkbox" {% if wiz.get('enable') %}checked="1"{% endif %} />
+        {{appendStrs["Wiz"]}}
+      </label>
+      <input type="text" name="wiz_mail" placeholder="@mywiz.cn" value="{{ wiz.get('email', '') }}" class="pure-u-1" />
+    </div>
+
+    <hr style="margin:1.5em 0;border:0;border-bottom:1px solid #e5e5e5" />
+
+    <div class="pure-control-group">
+      <label for="enable_pocket" class="pure-checkbox">
+        <input id="enable_pocket" name="pocket" type="checkbox" {% if pocket.get('enable') and pocket.get('access_token') %} checked="1" {% endif %} {% if not pocket.get('access_token') %} disabled="1" {% endif %} />
+        {{appendStrs["Pocket"]}}&nbsp;&nbsp;&nbsp;&nbsp;
+        {%if pocket.get('access_token') -%}
+        [<a href="/oauth2/pocket" style="text-decoration:none;color:silver;">{{ _("Authorized") }}</a>]
+        {%else -%}
+        [<a href="/oauth2/pocket">{{ _("Authorize") }}</a>]
+        {%endif -%}
+      </label>
+    </div>
+    <div class="pure-control-group pure-g">
+      <label for="enable_instapaper" class="pure-u-1 pure-checkbox">
+        <input id="enable_instapaper" name="instapaper" type="checkbox"
+        {% if instapaper.get('enable') %} checked="1"{% endif %} />
+        {{appendStrs["Instapaper"]}}
+      </label>
+      <div class="pure-u-1 pure-u-sm-9-24">
+        <input type="text" name="instapaper_username" id="instapaper_username" placeholder="{{ _('Email or Username') }}" value="{{ instapaper.get('username', '') }}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-9-24">
+        <input type="password" name="instapaper_password" id="instapaper_password" placeholder="{{ _('Password') }}" value="{% if instapaper.get('password') %}{{ user.decrypt(instapaper.get('password')) }}{% endif %}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-6-24" style="text-align:center;">
+        <a href="javascript:;" onclick="VerifyInstapaper();return false;" class="pure-u-1 pure-button">{{_("Verify")}}</a>
+      </div>
+    </div>
+    <div class="pure-control-group pure-g">
+      <label for="enable_wallabag" class="pure-u-1 pure-checkbox">
+        <input id="enable_wallabag" name="wallabag" type="checkbox"
+        {% if wallabag.get('enable') %} checked="1"{% endif %} />
+        {{appendStrs["wallabag"]}}
+      </label>
+      <div class="pure-u-1 pure-u-sm-9-24" style="margin-bottom: 5px">
+        <input type="text" name="wallabag_username" id="wallabag_username" placeholder="{{ _('Username') }}" value="{{ wallabag.get('username', '') }}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-9-24" style="margin-bottom: 5px">
+        <input type="password" name="wallabag_password" id="wallabag_password" placeholder="{{ _('Password') }}" value="{% if wallabag.get('password') %}{{ user.decrypt(wallabag.get('password')) }}{% endif %}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-6-24" style="text-align:center;">
+        <a href="javascript:;" onclick="VerifyWallaBag();return false;" class="pure-u-1 pure-button">{{_("Verify")}}</a>
+      </div>
+      <div class="pure-u-1 pure-u-sm-9-24" style="margin-bottom: 5px">
+        <input type="text" name="wallabag_client_id" id="wallabag_client_id" placeholder="{{ _('client_id') }}" value="{{wallabag.get('client_id', '')}}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-9-24" style="margin-bottom: 5px">
+        <input type="text" name="wallabag_client_secret" id="wallabag_client_secret" placeholder="{{ _('client_secret') }}" value="{{wallabag.get('client_secret', '')}}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+      <div class="pure-u-1 pure-u-sm-9-24">
+        <input type="text" name="wallabag_host" id="wallabag_host" placeholder="{{ _('Host') }}" value="{{ wallabag.get('host', '') }}" class="pure-u-1 pure-u-sm-23-24" />
+      </div>
+    </div>
+
+    <hr style="margin:2em 0;border:0;border-bottom:1px solid #e5e5e5" />
+
+    <div class="pure-control-group">
+      <label for="enable_facebook" class="pure-checkbox">
+        <input id="enable_facebook" name="facebook" type="checkbox" {% if shareLinks.get('Facebook') %}checked="1"{% endif %} />
+        {{appendStrs["Facebook"]}}
+      </label>
+      <label for="enable_twitter" class="pure-checkbox">
+        <input id="enable_twitter" name="x" type="checkbox" {% if shareLinks.get('X') %}checked="1"{% endif %} />
+        {{appendStrs["X"]}}
+      </label>
+      <label for="enable_tumblr" class="pure-checkbox">
+        <input id="enable_tumblr" name="tumblr" type="checkbox" {% if shareLinks.get('Tumblr') %}checked="1"{% endif %} />
+        {{appendStrs["Tumblr"]}}
+      </label>
+      <label for="enable_weibo" class="pure-checkbox">
+        <input id="enable_weibo" name="weibo" type="checkbox" {% if shareLinks.get('Weibo') %}checked="1"{% endif %} />
+        {{appendStrs["Weibo"]}}
+      </label>
+      <label for="enable_browser" class="pure-checkbox">
+        <input id="enable_browser" name="browser" type="checkbox" {% if shareLinks.get('Browser') %}checked="1"{% endif %} />
+        {{appendStrs["Browser"]}}
+      </label>
+      <label for="enable_qrcode" class="pure-checkbox">
+        <input id="enable_qrcode" name="qrcode" type="checkbox" {% if shareLinks.get('Qrcode') %}checked="1"{% endif %} />
+        {{appendStrs["Qrcode"]}}
+      </label>
+    </div>
+
+    <hr style="margin:2em 0;border:0;border-bottom:1px solid #e5e5e5" />
+    <div style="text-align:center;">
+      <button type="submit" class="pure-button pure-button-primary pure-input-rounded" style="margin-top:8px;">{{_("Save settings")}}</button>
+    </div>
+  </fieldset>
+</form>
+{% endblock -%}

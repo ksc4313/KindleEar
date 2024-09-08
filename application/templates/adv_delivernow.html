@@ -1,0 +1,40 @@
+{% extends "adv_base.html" %}
+{% block titleTag -%}
+<title>{{ _("Deliver now") }} - KindleEar</title>
+{% endblock -%}
+{% block advcontent -%}
+<div class="pure-form pure-form-aligned">
+  <fieldset>
+    <legend>{{ _("Deliver Now") }}</legend>
+    <p><small>{{ _("Deliver selected recipes now.") }}</small></p>
+    <div class="box-list">
+      {% if recipes|length == 0 -%}
+        <div class="box">{{ _("There are no recipes subscribed") }}</div>
+      {% endif -%}
+      {% for item in recipes -%}
+      <label for="{{item.recipe_id}}" class="pure-checkbox box">
+        <input id="{{item.recipe_id}}" type="checkbox" class="deliver_now_rss_id" checked="1" onclick="UpdateDeliverLink('{{user.name}}','{{deliveryKey}}');" />
+        <span>{{item.title}}</span>{% if item.separated %}<sup>{{_('Sep')}}</sup>{%endif%}
+      </label>
+      {% endfor -%}
+      {% if recipes|length > 0 -%}
+      <div class="cornerControls" style="padding:.5em 0;text-align:center;">
+        <a onclick="SelectDeliverAll();UpdateDeliverLink('{{user.name}}','{{deliveryKey}}');return false;" href="#" class="actionButton">{{_("Select all")}}</a>
+        <a onclick="SelectDeliverNone();UpdateDeliverLink('{{user.name}}','{{deliveryKey}}');return false;" href="#" class="actionButton">{{_("Select none")}}</a>
+      </div>
+      {% endif -%}
+    </div>
+    <div style="text-align:center;">
+        <a href="/deliver?u={{user.name}}&key={{deliveryKey}}" value="{{ _('Deliver') }}" id="deliverNowButton" class="pure-button pure-button-primary pure-input-rounded">{{ _('Deliver') }}</a>
+    </div>
+  </fieldset>
+</div>
+{% endblock -%}
+{% block js -%}
+<script type="text/javascript">
+$(document).ready(function() {
+  SelectDeliverAll();
+  UpdateDeliverLink('{{user.name}}', '{{deliveryKey}}');
+});
+</script>
+{% endblock -%}

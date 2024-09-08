@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block titleTag -%}
+<title>{{ _("Feeds") }} - KindleEar</title>
+{% endblock -%}
+
+{% block bodytag -%}
+<body class="my-rss">
+{% endblock -%}
+
+{% block content -%}
+<div class="main">
+  <legend>{{_("Custom RSS")}}</legend>
+  <div class="box-list">
+    <div class="book box pure-form pure-form-aligned" style="padding-right:1em;">
+      <div class="pure-control-group titleRow pure-g" style="font-size:1em;font-weight:normal;">
+        <div class="pure-u-3-5 pure-u-sm-2-3 pure-u-md-2-3">
+          <input type="text" name="rss_title" id="title_to_add" class="pure-u-23-24 pure-input-rounded" placeholder="{{ _('Title')}}"
+            {% if title_to_add %}value="{{title_to_add}}"{% endif %}/>
+        </div>
+        <div class="pure-u-2-5 pure-u-sm-1-3 pure-u-md-1-3" style="text-align:right;">
+          <label style="width:auto;white-space:nowrap;margin-right:20px;">
+            <input type="checkbox" name="fulltext" id="isfulltext" {% if isfulltext %}checked="checked"{% endif %}/>
+            {{_("Content Embedded")}}
+          </label>
+          <label style="width:auto;white-space:nowrap;">
+            <input type="checkbox" name="separated" id="separated" style="margin-left:10px;" />
+            {{_("Deliver Separately")}}
+          </label>
+        </div>
+      </div>
+      <div class="summaryRow" style="white-space:nowrap;">
+        <input type="text" name="url" id="url_to_add" class="pure-input-3-4 pure-input-rounded" placeholder="URL"
+        {% if url_to_add %}value="{{url_to_add}}"{% endif %}/>
+        <button onclick="AddCustomRss();return false;" class="actionButton add pure-input-1-4" style="margin-left:10px;">{{_("Add")}}</button>
+      </div>
+      {% if tips -%}
+        <div class="notice-box">{{tips|safe}}</div>
+      {% endif -%}
+    </div>
+
+    <div id="divMyCustomRss">
+      <!-- 由脚本在这里填充数据 -->
+    </div>
+  </div>
+  
+  <legend>{{_("Subscribed")}}</legend>
+  <div id="mysubscribed" class="box-list">
+    <!-- 由脚本在这里填充数据 -->
+  </div>
+
+  <legend>{{_("Library")}}&nbsp;&nbsp;<small><a href="https://www.mobileread.com/forums/forumdisplay.php?f=228" target="_blank" style="text-decoration:none;font-weight:normal;color:#555">[{{_("get more recipes")}}]</a></small></legend>
+  <div class="pure-g box-list noborder lib-header">
+    <div class="pure-u-1-3 width1_3 pure-form">
+      <select class="pure-input-rounded width100" id="language_pick">
+      </select>
+    </div>
+    <div class=" pure-u-1-6 upload-recipe">
+      <button class="upload-recipe-btn" title="{{_('Upload custom recipe')}}"onclick="OpenUploadRecipeDialog()"><i class="iconfont icon-upload"></i></button>
+    </div>
+    <div class="pure-form">
+      <input type="text" name="search" id="search_recipe" class="pure-input-1 pure-input-rounded" placeholder="{{ _('Search')}}" />
+    </div>
+  </div>
+  <div id="all_recipes" class="box-list">
+    <!-- 由脚本在这里填充数据 -->
+  </div>
+  <div id="toast" class="toast">
+    <i>&#10003; {{_("Subscription to selected recipe successful.")}}</i>
+  </div>
+
+  <legend>{{_("Bookmarklet")}}</legend>
+  <div id="bookmarklet" class="box-list">
+    <div class="book box" id="bookmarklet_content">
+      <a class="actionButton" target="_blank" href='javascript:void function(){var o={userName:"{{user.name}}",key:"{{share_key}}",title:document.title,urls:window.location.href},s=window.getSelection().rangeCount%3Fnew XMLSerializer().serializeToString(window.getSelection().getRangeAt(0).cloneContents()):"";s%3F(o.text=s,function(url,formData){var h=(tag,props)=>Object.assign(document.createElement(tag),props),form=h("form",{action:url,method:"post",hidden:!0,target:"_blank"});for(var[name,value]of Object.entries(formData))form.appendChild(h("input",{name,value}));document.body.appendChild(form),form.submit(),setTimeout(()=>{form.remove()},100),alert("The text you selected ("+s.length()+"Bytes) has been sent to KindleEar.")}("{{url2book_url}}",o)):open("{{url2book_url}}%3F"+new URLSearchParams(o).toString())}();' onclick="return false;">
+        {{_("Send to Kindle")}}
+      </a>
+      <a class="actionButton" target="_blank" href="
+javascript:void(open('{{subscribe_url}}?title_to_add='+encodeURIComponent(document.title)+'&url_to_add='+encodeURIComponent(window.location.href)));" onclick="return false;">
+        {{_("Subscribe with KindleEar")}}
+      </a>
+      <div style="padding-top:10px;text-align:center;">
+        <small>- {{_("Drag and drop this link to your bookmarks")}} -</small>
+      </div>
+      <hr/>
+      <div style="padding-top:10px;text-align:center;">
+        <span><a style="text-decoration:none;color:#333" target="_blank" href="https://chrome.google.com/webstore/detail/hjgdeckkpbdndigjkdlloacphoednmln">[{{_("Chrome extension")}}]</a></span>
+        <span style="margin-left:20px;"><a style="text-decoration:none;color:#333" target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/kbenhnoknpimfepkkngagppiebjgfokp">[{{_("Edge extension")}}]</a></span>
+        <div style="margin-top:10px">
+          <small>- {{_("Browser extensions also available")}} -</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock -%}
+
+{% block javascript_inhead -%}
+<script type="text/javascript">
+var my_custom_rss_list = {{my_custom_rss|safe}};
+var my_uploaded_recipes = {{my_uploaded_recipes|safe}};
+var my_booked_recipes = {{my_booked_recipes|safe}};
+var all_builtin_recipes = {};
+</script>
+{% endblock -%}
+
+{% block js -%}
+<script type="text/javascript">
+$(document).ready(function() {
+  FetchBuiltinRecipesXml();
+  PopulateMyCustomRss(); //填充订阅区段
+  PopulateMySubscribed();
+  RegisterHideHambClick();
+  //在界面上选择了一项Recipe语种，将对应语种的recipe显示出来
+  $("#language_pick").on("change", function(){
+    PopulateLibrary('');
+  });
+
+  //在指定语言里面搜索标题或描述
+  $("#search_recipe").on("input", function() {
+    PopulateLibrary($(this).val());
+  });
+
+  {% if session.get('role') != 'admin' -%}
+  var mailPrefix = "{{user.name}}__";
+  {% else -%}
+  var mailPrefix = '';
+  {% endif -%}
+  insertBookmarkletGmailThis("{{subscribe_url}}", mailPrefix);
+});
+</script>
+{% endblock -%}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block titleTag -%}
+<title>{{ _("Logs") }} - KindleEar</title>
+{% endblock -%}
+
+{% block content -%}
+{% set rowStyle = cycler('', 'style="background-color:#f5f5f5;"') %}
+<div class="main">
+  <div class="logs">
+    {% if mylogs -%}
+    <legend>{{_("Only display last 20 logs")}}</legend>
+    <table class="pure-table pure-table-horizontal" width="100%">
+      <colgroup>
+      <col width="30%">
+      <col width="40%">
+      <col width="15%">
+      <col width="10%">
+      <col width="5%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>{{ _("Time") }}</th>
+          <th>{{ _("Title") }}</th>
+          <th>{{ _("Size") }}</th>
+          <th>{{ _("To") }}</th>
+          <th>{{ _("Status") }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for log in mylogs -%}
+        <tr {{rowStyle.next()|safe}}>
+          {% if log.time_str.startswith(today) -%}
+          <td superscript-title="NEW">{{log.time_str}}</td>
+          {% else -%}
+          <td>{{log.time_str}}</td>
+          {% endif -%}
+          <td>{{log.book}}</td>
+          <td>{{log.size|filesizeformat}}</td>
+          <td>{{log.to}}</td>
+          <td>
+          {% if log.status == 'ok' -%}
+            <span class="status success">{{log.status}}</span>
+          {% elif log.status|length > 15 -%}
+            <span class="log_tooltip status error">{{log.status[:12]}}...<span class="log_tooltiptext">{{log.status}}</span></span>
+          {% else -%}
+            <span class="status error">{{ log.status }}</span>
+          {% endif -%}
+          </td>
+        </tr>
+      {% endfor -%}
+      </tbody>
+    </table>
+    {% else -%}
+    <div class="notice-box">{{_('There is nothing here.')}}</div>
+    {% endif -%}
+
+    {% if logs -%}
+    <legend>{{ _("Logs of other users") }}</legend>
+    <table class="pure-table pure-table-horizontal" width="100%">
+      <colgroup>
+        <col width="10%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="15%" />
+        <col width="20%" />
+        <col width="5%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>{{ _("Username") }}</th>
+          <th>{{ _("Time") }}</th>
+          <th>{{ _("Title") }}</th>
+          <th>{{ _("Size") }}</th>
+          <th>{{ _("To") }}</th>
+          <th>{{ _("Status") }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for u in logs -%}
+      {% for log in logs[u] -%}
+        <tr {{rowStyle.next()|safe}}>
+          <td>{{u}}</td>
+          {% if log.time_str.startswith(today) -%}
+          <td superscript-title="NEW">{{log.time_str}}</td>
+          {% else -%}
+          <td>{{log.time_str}}</td>
+          {% endif -%}
+          <td>{{log.book}}</td>
+          <td>{{log.size|filesizeformat}}</td>
+          <td>{{log.to}}</td>
+          <td>
+            {% if log.status == 'ok' -%}
+            <span class="status success">{{log.status}}</span>
+            {% elif log.status|length > 15 -%}
+            <span class="log_tooltip status error">{{log.status[:12]}}...<span class="log_tooltiptext">{{log.status}}</span></span>
+            {% else -%}
+            <span class="status error">{{ log.status }}</span>
+            {% endif -%}
+          </td>
+        </tr>
+      {% endfor -%}
+      {% endfor -%}
+      </tbody>
+    </table>
+    {% endif -%} {# endif of if logs -#}
+  </div>
+</div>
+{% endblock -%}

@@ -1,94 +1,72 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-"""Configures for KindleEar, the First two variable is must to modify.
-KindleEar配置文件，请务必修改开始两个配置（如果使用uploader，则uploader自动帮你修改）
-"""
+# KindleEar configuration.
+# All configuration variables in this file can be set via environment variables too.
+# Values from this file are only used if the environment variables are not present.
+#
+# 这个文件里面的所有配置变量都可以通过环境变量来设置。
+# 程序会优先使用环境变量，只有环境变量不存在时才使用此文件中的数值。
+#
 
-SRC_EMAIL = "akindleear@gmail.com"  #Your gmail account for sending mail to Kindle
-DOMAIN = "http://kindleear.appspot.com/" #Your domain of app
+APP_ID = "kindleear"
+APP_DOMAIN = "https://kindleear.appspot.com"
 
-TIMEZONE = 8  #Default timezone, you can modify it in webpage after deployed
+#Need for google taskqueue only, Refers to <https://cloud.google.com/appengine/docs/locations>
+#Find it at Upper right corner of <https://console.cloud.google.com/appengine?project=your_app_id>
+#Or get by cmd: gcloud beta app describe
+#Two exceptions: europe-west should be europe-west1, us-central should be us-central1
+SERVER_LOCATION = "us-central1"
 
-DEFAULT_MASTHEAD = "mh_default.gif" #default masthead
-DEFAULT_COVER = "cv_default.jpg" #default cover, leave it empty will not add cover to book
-DEFAULT_COVER_BV = DEFAULT_COVER #default cover for merged-book, None indicates paste all covers into one, =DEFAULT_COVER enable the using of uploaded image.
+#Choose the database
+#Supports: "datastore", "sqlite", "mysql", "postgresql", "cockroachdb", "mongodb", "redis", "pickle"
+#DATABASE_URL = "mongodb://127.0.0.1:27017/"
+#DATABASE_URL = 'sqlite:////home/ubuntu/site/kindleear/database.db'
+#DATABASE_URL = 'sqlite:///database.db'
+DATABASE_URL = "sqlite:////data/kindleear.db"
 
-MY_FEEDS_TITLE = u'KindleEar'
-MY_FEEDS_DESC = u'RSS from KindleEar'
+#Select the type of task queue, "gae", "apscheduler", "celery", "rq", ""
+TASK_QUEUE_SERVICE = "apscheduler"
 
-#default timeout for network connection
-CONNECTION_TIMEOUT = 60
+#If task queue service is apscheduler, celery, rq
+#Options: 'redis://', 'mongodb://', 'sqlite://', 'mysql://', 'postgresql://'
+#For apscheduler, it can be 'memory'. (Only if gunicorn have one worker)
+#For rq, only 'redis://' is supported
+#TASK_QUEUE_BROKER_URL = "redis://127.0.0.1:6379/"
+TASK_QUEUE_BROKER_URL = "memory"
 
-# True to translate filename in chinese to pinyin
-PINYIN_FILENAME = False
+#If this option is empty, temporary files will be stored in memory
+#Setting this option can reduce memory consumption, supports both relative and absolute paths
+KE_TEMP_DIR = "/tmp"
 
-#If set to True, encoding detected by chardet module will be used for each article
-#otherwise encoding in http response header or meta of html is used in proprity.
-ALWAYS_CHAR_DETECT = False
+#If online reading is required, this directory is used to store the generated e-books.
+EBOOK_SAVE_DIR = ""
 
-#True indicates that any encoding in http header or in html header will be used.
-#False indicates that encoding will be used if the encoding in http header and the one in html header are the same.
-TRUST_ENCODING_IN_HEADER_OR_META = True
+#Offline dictionaries for online reading
+DICTIONARY_DIR = ""
 
-#generate brief description for toc item or not.
-GENERATE_TOC_DESC = True
-TOC_DESC_WORD_LIMIT = 500
+#If the depolyment plataform supports multi-threads, set this option will boost the download speed
+DOWNLOAD_THREAD_NUM = "3"
 
-#-------------------add by rexdf-----------
-#title for table of contents
-TABLE_OF_CONTENTS = u'Table Of Contents'
+#If the website allow visitors to signup or not, "yes"|"no"
+ALLOW_SIGNUP = "no"
 
-#description of toc contains image or not
-GENERATE_TOC_THUMBNAIL = True
+#The secret key for browser session.
+SECRET_KEY = "n7ro8QJI1qfe"
 
-#if generate other html toc or not, just for reading in pc
-GENERATE_HTML_TOC = True
+#The secret key for starting delivery
+DELIVERY_KEY = "cY9gKC"
 
-#if convert color image to gray or not, good for reducing size of book if you read it in Kindle only
-COLOR_TO_GRAY = True
+#The administrator's login name
+ADMIN_NAME = "admin"
 
-#Split long image(height of image is bigger than some value) to multiple images or not?
-#This feature is disabled if it be set to None or 0.
-THRESHOLD_SPLIT_LONG_IMAGE = 750
+#You can use this public key or apply for your own key
+POCKET_CONSUMER_KEY = "50188-e221424f1c9ed0c010058aef"
 
-#----------------end of add by rexdf-------
+#Hide the option 'local (debug)' of 'Send Mail Service' setting or not, "yes"|"no"
+HIDE_MAIL_TO_LOCAL = "yes"
 
-#reduce dimension of image to (Width,Height)
-#or you can set it to None, and choose device type in webpage 'setting'
-REDUCE_IMAGE_TO = None #(600,800)
+#'debug', 'info', 'warning', 'error', 'critical'
+LOG_LEVEL = "warning"
 
-#clean css in dealing with content from string@appid.appspotmail.com or not
-DELETE_CSS_FOR_APPSPOTMAIL = True
-
-#if word count more than the number, the email received by appspotmail will 
-#be transfered to kindle directly, otherwise, will fetch the webpage for links in email.
-WORDCNT_THRESHOLD_FOR_APMAIL = 100
-
-#subject of email will be truncated based limit of word count
-SUBJECT_WORDCNT_FOR_APMAIL = 16
-
-#retry count when failed in sendmail to kindle
-SENDMAIL_RETRY_CNT = 1
-
-#GAE restrict postfix of attachment in email to send
-#True indicates KindleEar will replace the dot to underline to send mail if it failed.
-SENDMAIL_ALL_POSTFIX = False
-
-#text for link to share or archive
-#SHARE_FUCK_GFW_SRV: (For users in China)如果你要翻墙的话，请设置为其中一个转发服务器
-#翻墙转发服务器源码：http://github.com/cdhigh/forwarder
-#SHARE_FUCK_GFW_SRV = "http://forwarder.ap01.aws.af.cm/?k=xzSlE&t=60&u=%s"
-SHARE_FUCK_GFW_SRV = "http://kforwarder.herokuapp.com/?k=xzSlE&t=60&u=%s"
-SAVE_TO_EVERNOTE = u"Save to Evernote"
-SAVE_TO_WIZ = u"Save to Wiz"
-SAVE_TO_POCKET = u"Save to Pocket"
-SAVE_TO_INSTAPAPER = u"Save to Instapaper"
-SHARE_ON_XWEIBO = u"Share on Sina Weibo"
-SHARE_ON_TWEIBO = u"Share on Tencent Weibo"
-SHARE_ON_FACEBOOK = u"Share on Facebook"
-SHARE_ON_TWITTER = u"Tweet it"
-SHARE_ON_TUMBLR = u"Share on Tumblr"
-OPEN_IN_BROWSER = u"Open in Browser"
-
-POCKET_CONSUMER_KEY = '50188-e221424f1c9ed0c010058aef'
-
+#if in demo mode
+DEMO_MODE = 'no'

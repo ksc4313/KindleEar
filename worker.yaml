@@ -1,0 +1,48 @@
+runtime: python310
+service: worker
+
+#Adjust this if "out of memory"
+#B1: 384MB/600MHz/manual_scaling
+#B2: 768MB/1.2GHz/manual_scaling
+#B4: 1536MB/2.4GHz/manual_scaling
+#B4_1G: 3072MB/2.4GHz/manual_scaling
+#B8: 3072MB/4.8GHz/manual_scaling
+instance_class: B2
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 20m
+
+app_engine_apis: true
+entrypoint: gunicorn -b :$PORT --workers 1 --threads 2 --timeout 1200 main:app
+
+inbound_services:
+- mail
+- mail_bounce
+
+env_variables:
+  KE_TEMP_DIR: "/tmp"
+  DATABASE_URL: "datastore"
+
+handlers:
+- url: /robots.txt
+  static_files: application/static/robots.txt
+  upload: application/static/robots.txt
+
+- url: /favicon.ico
+  static_files: application/static/favicon.ico
+  upload: application/static/favicon.ico
+  mime_type: image/x-icon
+
+- url: /static
+  static_dir: application/static
+
+- url: /images
+  static_dir: application/images
+
+- url: /recipes
+  static_dir: application/recipes
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto

@@ -1,0 +1,43 @@
+{% extends "adv_base.html" %}
+{% block titleTag -%}
+<title>{{ _("Stylesheet") }} - KindleEar</title>
+{% endblock -%}
+
+{% block css -%}
+<style type="text/css">
+#csspreview {
+  text-align: left;
+  background-color: #eee;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+</style>
+{{super()}}
+{% endblock -%}
+
+{% block advcontent -%}
+<form class="pure-form" id="uploadForm" action="{{uploadUrl}}" method="POST" enctype="multipart/form-data">
+  <fieldset>
+    <legend>{{_("Upload stylesheet")}}</legend>
+    <p><small>{{_("Upload a stylesheet from local (accept utf-8 only).")}}</small></p>
+    <div class="box-list">
+      <input type="file" name="css_file" id="css_file" class="pure-input-1 box" accept="text/css" />
+      <textarea id="cssPreview" rows="10" cols="50" readonly="true">{% if extra_css -%}{{extra_css}}{% endif -%}
+      </textarea>
+    </div>
+    <div style="text-align:center;">
+      <input type="button" value="{{_('Upload')}}" id="fileSubmit" class="pure-button pure-button-primary pure-input-rounded" />
+      <a href="javascript:;" deletehref="{{deleteUrl}}" id="deletecss" class="pure-button pure-input-rounded">{{_("Delete")}}</a>
+    </div>
+  </fieldset>
+</form>
+{% endblock -%}
+{% block js -%}
+<script type="text/javascript">
+$(document).ready(function(){
+  //mimeType, formId, fileInputId, upBtnId, delBtnId, previewTagId, progressId
+  AjaxFileUpload.init('text', '#uploadForm', '#css_file', '#fileSubmit', '#deletecss', '#cssPreview');
+});
+</script>
+{% endblock -%}

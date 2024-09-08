@@ -1,0 +1,1154 @@
+@charset "utf-8"
+
+/*
+ * -- BASE STYLES --
+ */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #526066;
+}
+
+h2, h3 {
+    font-weight: 600;
+}
+
+legend {
+    font-size: 1.17em;
+    font-weight: 600;
+    margin: 0.8em 0.2em;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+a {
+    color: #0078e7;
+}
+
+input[type=submit],
+button {
+  outline: none;
+}
+
+/*
+ * -- Override PureCSS --
+ */
+
+.pure-form .pure-input-rounded,
+.pure-form input.pure-input-rounded {
+  padding: .5em 1.5em;
+}
+
+.pure-form select {
+    height: auto;
+}
+
+/*
+ * -- LAYOUT STYLES --
+ */
+
+#content {
+    min-height: 100%;
+    margin-bottom: -73px;
+}
+
+.l-content {
+    padding: 3em 0;
+    padding-bottom: 73px;
+}
+
+.footer-sticker {
+    height: 73px;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+/*
+ * -- MENU STYLES --
+ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,.15)
+}
+
+.logo {
+    margin: 10px;
+    padding: 3px 20px;
+    font-family: "Oleo Script", Palatino, STSong, SimSun, system-ui, serif;
+    font-size: 1.5em;
+    text-transform: none;
+    font-weight: bolder;
+    color: #ff5733;
+    border-radius: 50%;
+    border: 1px solid #ffddc1;
+    background-color: #ffddc1;
+    box-shadow: 2px 2px 5px #ff5733;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.reader-link {
+    font-family: "Oleo Script", Palatino, STSong, SimSun, system-ui, serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 3px;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    border: 1px solid #c1e1ff;
+    text-transform: none;
+    background-color: #c1e1ff;
+    color: #3375ff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #0078e7;
+}
+
+.home-menu {
+    padding: 0 .5em;
+}
+
+.home-menu .pure-menu-item {
+    height: auto;
+}
+
+.home-menu .pure-menu-link {
+    padding: 1em .5em;
+}
+
+.app-menu {
+    background-color: #0078e7;
+}
+
+.app-menu .pure-menu-list {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+@media only screen and (min-width: 480px) {
+    .app-menu .pure-menu-list {
+        display: block !important;
+    }
+}
+
+.app-menu .pure-menu-link {
+    color: #6fbef3;
+}
+
+.app-menu a,
+.app-menu span {
+    padding: .8em 1em;
+}
+
+.app-menu .pure-menu-selected a,
+.app-menu .pure-menu-selected span {
+    color: white !important;
+    text-decoration: none;
+}
+
+.app-menu .pure-menu-item a:hover,
+.app-menu .pure-menu-item a:focus {
+    background: none;
+    border: none;
+    color: #aecfe5;
+}
+
+.app-menu.pure-menu-horizontal.pure-menu-scrollable {
+    padding: 0;
+}
+
+.main {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1024px;
+}
+
+/*
+ * -- BANNER --
+ */
+
+.banner {
+    padding: 6em 0;
+    background: #262626 url('banner-bg.png') center center no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='banner-bg.png', sizingMethod='scale');
+    width: 100%;
+    display: table;
+}
+
+@media (min-width: 480px) {
+    .banner {
+        padding: 10em 0;
+    }
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    padding: 0 2em;
+}
+
+.banner-head h1 {
+    margin: 0 0 .67em 0;
+    font-size: 3.8em;
+    color: white;
+    font-weight: 200;
+    text-shadow: 0 1px 1px black;
+}
+.banner-head h2 {
+    margin: 0 0 .67em 0;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 200;
+    text-shadow: 0 1px 1px black;
+}
+
+.banner a.pure-button {
+    border-radius: 2em;
+    padding: .8em 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-head h1 {
+        font-size: 2.8em;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .banner-head h1 {
+        font-size: 1.6em;
+    }
+
+    .banner-head form input {
+        margin-bottom: .3em;
+    }
+
+    .banner-head form button {
+        margin-top: .7em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .banner-head h1 {
+        font-size: 1.49em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner-head h1 {
+        font-size: 1.23em;
+    }
+}
+
+/*
+ * -- BOX LIST STYLE --
+ */
+
+.box-list {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-top-width: 2px;
+    border-top-color: #ccc;
+    border-radius: .5em;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.box-list .box {
+    position: relative;
+    margin: 0;
+    padding: .7em 1em;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.box-list .box:hover {
+    background-color: #f9f9f9;
+}
+
+.box-list .box:last-child {
+    border-bottom: 0;
+}
+
+.box-list#bookmarklet .box {
+    padding-right: 1em;
+}
+
+.box-list#bookmarklet .box a {
+    margin-top: 8px;
+}
+
+.box-list .book .titleRow {
+    padding-bottom: .2em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.box-list .book.pure-form .titleRow {
+    font:unset;
+}
+
+.box-list#bookmarklet .book .titleRow small {
+    font-weight: normal;
+    padding-left: .5em;
+}
+
+.box-list .book .titleRow input {
+    margin-left: 10px;
+}
+
+.box-list .book .titleRow label {
+    font-size: 0.6em;
+    color: red;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.box-list .book .titleRow img {
+    vertical-align: 3px;
+    margin-left: 10px;
+}
+
+.box-list .book .titleRow span {
+    font-size: 0.6em;
+    color: gray;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*.box-list .book .titleRow sup*/
+sup {
+    font-size: 0.6em;
+    color: red;
+    font-weight: normal;
+    font-style: italic;
+    margin-left: 10px;
+    padding: 4px;
+    border: dotted 1px #C785C8;
+    border-radius: 10px;
+}
+
+.box-list .book .summaryRow {
+    word-wrap: break-word;
+    font-size: 0.5em;
+}
+
+.box-list .book .summaryRow a {
+    text-decoration: none;
+    color: gray;
+}
+
+.box-list .book .summaryRow a:hover {
+    color: #0078e7;
+    text-decoration: underline;
+}
+
+.actionButton {
+    display: inline-block;
+    padding: 0 1em;
+    line-height: 30px;
+    text-align: center;
+    background-color: #999;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2em;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#bookmarklet .box .actionButton {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    border: 3px dotted gray;
+    background-color: #efefef;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
+
+.box-list .box .cornerControls {
+    margin-top: .5em;
+    text-align: center;
+}
+
+.actionButton.add {
+    background-color: #0078e7;
+}
+
+.actionButton:hover {
+    background-color: rgb(202, 60, 60);
+}
+
+.actionButton.add:hover {
+    background-color: #0765bb;
+}
+
+.actionButton.act:hover {
+    background-color: #0078e7;
+}
+
+@media only screen and (min-width: 768px) {
+    .my-rss .box-list .box {
+        padding-right: 2em;
+    }
+    .advwhitelist .box-list .box {
+        padding-right: 6em;
+    }
+
+    .box-list .box .cornerControls {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        margin-top: -17px;
+    }
+}
+
+/*
+ * -- FORM ELEMENT STYLE --
+ */
+
+.my-rss h2 {
+    margin: .5em auto;
+    text-align: center;
+}
+
+.settings .pure-form-aligned .pure-control-group label,
+.admin .pure-form-aligned .pure-control-group label {
+    display: inline-block;
+    width: auto;
+    font-weight: bold;
+}
+
+.advdelivernow .pure-form .pure-radio,
+.advdelivernow .pure-form label {
+    margin: 0;
+}
+
+@media only screen and (min-width: 568px) {
+    .settings .pure-form-aligned .pure-control-group label,
+    .admin .pure-form-aligned .pure-control-group label {
+        width: 7.5em;
+        padding: .45em;
+        border-bottom: 2px solid #eee;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+}
+
+.pure-form legend {
+    color: #526066;
+}
+
+/*
+ * -- NOTICE STYLE --
+ */
+
+.notice-box {
+    padding: 12px 20px;
+    margin-bottom: .6em;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    background-color: #fff3cd;
+    border-radius: 5px;
+}
+
+/*
+ * -- TABLE STYLE --
+ */
+
+table.pure-table {
+    font-size: .9em;
+    border-collapse: separate;
+    border-top-width: 2px;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+table.pure-table thead {
+    background-color: #eee;
+}
+
+@media only screen and (max-width: 568px) {
+    .pure-table-horizontal tr,
+    .pure-table-horizontal th,
+    .pure-table-horizontal td {
+        display: block;
+        padding: .3em 0;
+    }
+
+    .pure-table-horizontal tr {
+        padding: 1em;
+    }
+
+    .pure-table-horizontal th,
+    .pure-table-horizontal tbody td {
+        border-bottom: 0;
+    }
+
+    .pure-table-horizontal tbody tr {
+        border-top: 1px solid #cbcbcb;
+    }
+}
+
+/*
+* -- FOR COMBOBOX widget --
+*/
+
+.select-editable {
+    display: inline-block;    
+    position:relative;
+    background-color:white;
+    border:solid gray 1px;
+    width:250px;
+    height:34px;
+ }
+
+ .select-editable select {
+    position:absolute;
+    top:0px;
+    left:0px;
+    font-size:14px;
+    border:none;
+    width:250px;
+    height:35px;
+    margin:0;
+ }
+
+ .select-editable input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:225px;
+    height:34px;
+    padding:1px;
+    font-size:14px;
+    font-weight: bold;
+    border:solid gray 1px;
+    margin:0;
+ }
+
+ .select-editable select:focus, .select-editable input:focus {
+    outline:none;
+ }
+
+/*
+ * -- PAGINATION BUTTONS STYLE --
+ */
+
+.paging {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 14px;
+  color: #666666;
+  background-color: #FFFFFF;
+}
+
+.paging li {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  margin: 0px 5px;
+  padding: 0px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  cursor: pointer;
+  vertical-align: top;
+  text-align: center;
+}
+
+.paging li:hover {
+  border-color:#31C27C;
+  color:#31C27C;
+}
+
+.paging li.pgdisabled {
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+.paging .pageinfo {
+  width: 60px;
+  border: none;
+}
+
+/* logs html */
+td[superscript-title] {
+    position: relative;
+    overflow: hidden;
+}
+td[superscript-title]:after {
+    content: attr(superscript-title);
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    width: 120px;
+    height: 18px;
+    font-size: 9px;
+    line-height: 1.4;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, orange 0%, orangered 100%);
+    transform: rotate(-45deg);
+}
+
+.logs .status {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 3px 15px;
+  /*white-space: nowrap;*/
+}
+
+.logs .status.success {
+  background-color: green;
+}
+
+.logs .status.error {
+  background-color: darkorange;
+}
+
+.width1_3 {
+  width: calc(100% / 3);
+}
+
+.right_1_3 {
+  width: calc(100% / 3);
+  justify-self: end;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.noborder {
+    border: none;
+    background: white;
+    overflow: hidden;
+}
+
+select[id="shared_rss_lang_pick"] {
+    font-weight: bold;
+}
+
+.h3button {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+    border:solid 1px #ccc;
+    border-radius: 20px;
+    margin: 0px 40px;
+    padding: 2px 30px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.h3button:hover {
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    color: white;
+}
+
+/* Feed列表的汉堡菜单按钮及其弹出子按钮 */
+.hamburger-btn-container {
+    position: relative;
+}
+.hamburger-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: silver;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.hamburger-btn:hover {
+    background-color: #5FBCDD;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.additional-btns {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.additional-btn {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(155, 155, 155, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.additional-btn-disabled {
+    pointer-events:none;
+    background: silver !important;
+}
+.additional-btn:hover {
+    box-shadow: 0 0 10px rgba(155, 155, 155, 0.8);
+}
+
+.additional-btn a {
+    text-decoration: none;
+}
+
+.btn-A { /* A按钮为红色背景 */
+    background: linear-gradient(to bottom, rgba(219, 119, 173, 0.6) 50%, rgba(247, 1, 135, 0.8) 50%);
+}
+.btn-B { /* B为紫色背景 */
+    background: linear-gradient(to bottom, rgba(185, 159, 195, 0.6) 50%, rgba(155, 89, 182, 0.8) 50%);
+}
+.btn-C { /* C为浅绿色背景 */
+    background: linear-gradient(to bottom, rgba(167, 205, 167, 0.6) 50%, rgba(109, 198, 110, 0.8) 50%);
+}
+.btn-D { /* D为浅蓝色背景 */
+    background: linear-gradient(to bottom, rgba(133, 180, 211, 0.6) 50%, rgba(52, 152, 219, 0.8) 50%);
+}
+.btn-E { /* E为橙色背景 */
+    background: linear-gradient(to bottom, rgba(223, 143, 87, 0.6) 50%, rgba(240, 104, 11, 0.8) 50%);
+}
+.btn-F { /* F为棕色背景 */
+    background: linear-gradient(to bottom, rgba(210, 150, 159, 0.6) 50%, rgba(199, 97, 113, 0.8) 50%);
+}
+.btn-G { /* G为深绿色背景 */
+    background: linear-gradient(to bottom, rgba(76, 171, 5, 0.6) 50%, rgba(24, 87, 24, 0.8) 50%);
+}
+
+.lib-header {
+    display: flex;
+    align-items: center;
+}
+
+.lib-header div {
+    width: auto;
+}
+
+.upload-recipe {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.upload-recipe-btn {
+    text-align: center;
+    border: none;
+    border-radius: 2em;
+    padding: 0px 10px;
+    color: white;
+    width: 120px;
+    height: 35px;
+    background-color: #0078E7;
+}
+
+.upload-recipe-btn:hover{
+    background-color: #0765bb;
+}
+
+/* customizeDelivTime dialog */
+div.schedule_daytimes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row-gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.schedule_daytimes label {
+    white-space: nowrap;
+}
+.my_datepicker {
+    position: relative;
+    display: inline-block;
+}
+.my_datepicker input[type="text"], div.schedule_daytimes select {
+    width: 350px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.my_datepicker .my_calendar {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px silver;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    font-size: 0.8rem;
+    z-index: 999;
+}
+.my_datepicker .my_calendar.pos0 {
+    top: 35px;
+    grid-template-columns: repeat(7, 1fr);
+}
+.my_datepicker .my_calendar.pos1 {
+    bottom: 0;
+    grid-template-columns: repeat(8, 1fr);
+}
+.my_datepicker .my_calendar.show {
+    display: grid;
+}
+.my_datepicker .my_calendar label {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.my_datepicker .my_calendar label:hover {
+    background-color: #f0f0f0;
+}
+.my_datepicker .my_calendar label input[type="checkbox"] {
+    display: none;
+}
+.my_datepicker .my_calendar label:has(input[type="checkbox"]:checked) {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+}
+/*.my_datepicker .my_calendar label input[type="checkbox"]:checked + span {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}*/
+.my_datepicker .my_calendar span.button {
+    grid-column: span 4;
+    padding: 0px 20px 0px 20px;
+    font-size: 0.8rem;
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    align-self: center;
+    vertical-align: center;
+    cursor: pointer;
+}
+.my_datepicker .my_calendar span.button:hover {
+    background-color: #BEBCBC;
+    color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* iconfont */
+@font-face {
+  font-family: "iconfont";
+  src: url('/static/iconfont.woff') format('woff'),
+       url('/static/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+  /*vertical-align: 5px;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e609";
+}
+.icon-push:before {
+  content: "\e62a";
+}
+.icon-subscribe:before {
+  content: "\e600";
+}
+.icon-share:before {
+  content: "\e739";
+}
+.icon-source:before {
+  content: "\e644";
+}
+.icon-offcloud:before {
+  content: "\e694";
+}
+.icon-delete:before {
+  content: "\e645";
+}
+.icon-upload:before {
+  content: "\e7e0";
+}
+.icon-unsubscribe:before {
+  content: "\e61b";
+}
+.icon-key:before {
+  content: "\e62e";
+}
+.icon-invalid:before {
+  content: "\e8c0";
+}
+.icon-schedule:before {
+  content: "\ea5f";
+}
+.icon-edit:before {
+  content: "\e60c";
+}
+.icon-translate:before {
+  content: "\e8b2";
+}
+.icon-tts:before {
+  content: "\e692";
+}
+
+/* upload cover images */
+.imgFileUploade{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+.imgFileUploade .imgAll{
+    width: 100%; margin-top: 5px;
+}
+.imgFileUploade .imgAll ul:after{
+    visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0
+}
+.imgFileUploade .imgAll li{
+    list-style: none;
+    width: 195px;height: 300px;border:solid 1px #ccc;margin:8px 5px;float: left;
+    position: relative;box-shadow: 0 0 10px #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgFileUploade .imgAll li img{
+    display:block;width:auto;height:auto;max-width:100%;max-height:100%;border:none;
+}
+.image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.top-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.top-image :hover {
+    transform: scale(1.2);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.delImg{
+    position: absolute;top:-10px;right:-7px;width: 22px;height: 22px;
+    background: #000;border-radius: 50%;display: block;text-align: center;
+    line-height: 22px;color:#fff;font-weight: 700;font-style:normal;cursor: pointer;
+}
+/* container for cover image preview */
+.imgupBox,.imgupBox1,.imgupBox2,.imgupBox3{
+    border:solid 1px #ccc;
+}
+
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fcfab2;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #ada802;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+#up_cover_progress {
+    width:300px;
+    height:25px;
+    border:1px solid #98AFB7;
+    border-radius:5px;
+    margin:0 auto;
+}
+#up_cover_progress_bar {
+    width:0px;
+    height:25px;
+    border-radius:5px;
+    background:#5EC4EA;
+    text-align: center;
+}
+
+/* Usage: <a class="tooltip " data-msg="tooltip text">Text</a> */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 8px;
+}
+
+.tooltip:hover::before {
+    text-align: center;
+    content: attr(data-msg);
+    position: absolute;
+    padding: 8px;
+    display: block;
+    min-width: 200px;
+    color: #333;
+    background-color: #FFFCCC;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 0.8em;
+    /*line-height: 1.2em;*/
+    bottom: 2em;
+    /*top: calc(-220%);*/
+    left: 0px;
+}
+
+/* 用于推送记录异常信息太长的鼠标悬停指示 */
+.log_tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    cursor: help;
+}
+.log_tooltip .log_tooltiptext {
+    visibility: hidden;
+    width: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: calc(-100%); /*calc(10% + 5px);*/
+    left: calc(50% - 500px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.log_tooltip:hover .log_tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+dialog#h5-dialog {
+    padding: 0px;
+    min-width: 300px;
+    max-width: 80%;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background-color: canvas; /*#fafafa;*/
+    position: fixed;
+    margin: auto;
+    /*top: max(50%, calc(50% - 50vh));
+    transform: translateY(-50%);*/
+}
+dialog#h5-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#h5-dialog-content {
+    padding: 15px 40px 20px 40px;
+}
+#h5-dialog-closebutton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  /*background-color: #d32f2f;*/
+  background: linear-gradient(to bottom, #D26B6B, #d32f2f);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bolder;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+#h5-dialog-closebutton:hover {
+  /*background-color: #b71c1c;*/
+  background: linear-gradient(to bottom, #D04242, #b71c1c);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+#h5-dialog-buttons {
+    margin: 0px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+}
+.h5-dialog-ok {
+    min-width: 150px;
+    min-height: 40px;
+    margin: 25px;
+}
+.h5-dialog-cancel {
+    min-width: 150px;
+    min-height: 40px;
+    margin: 25px;
+}

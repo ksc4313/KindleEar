@@ -1,0 +1,2158 @@
+# Chinese translations for KindleEar.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the KindleEar project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KindleEar v3.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-26 15:24-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: application/templates/admin.html:3 application/templates/base.html:180
+#: application/templates/settings.html:252
+msgid "Admin"
+msgstr "账号管理"
+
+#: application/templates/admin.html:19
+msgid "Signup settings"
+msgstr "注册设置"
+
+#: application/templates/admin.html:19
+#: application/templates/adv_calibre_options.html:18
+msgid "Save"
+msgstr "保存"
+
+#: application/templates/admin.html:21
+#: application/templates/user_account.html:31
+msgid "Email service"
+msgstr "发送邮件服务"
+
+#: application/templates/admin.html:23
+#: application/templates/user_account.html:34
+msgid "Same as admin"
+msgstr "和管理员一致"
+
+#: application/templates/admin.html:24
+#: application/templates/user_account.html:35
+msgid "Independent"
+msgstr "独立设置"
+
+#: application/templates/admin.html:28
+msgid "Signup type"
+msgstr "用户注册类型"
+
+#: application/templates/admin.html:30
+msgid "Public"
+msgstr "公开"
+
+#: application/templates/admin.html:31
+msgid "One time code"
+msgstr "一次性邀请码"
+
+#: application/templates/admin.html:32
+msgid "Permanent code"
+msgstr "永久邀请码"
+
+#: application/templates/admin.html:36
+msgid "Invitation codes"
+msgstr "邀请码列表"
+
+#: application/templates/admin.html:37
+msgid "one code per line"
+msgstr "一行一码"
+
+#: application/templates/admin.html:43
+msgid "Accounts"
+msgstr "用户账号列表"
+
+#: application/templates/admin.html:43
+#: application/templates/adv_inboundmail.html:61
+#: application/templates/my.html:34 application/view/admin.py:57
+#: application/view/admin.py:64 application/view/admin.py:91
+msgid "Add"
+msgstr "添加"
+
+#: application/templates/admin.html:54
+#: application/templates/adv_archive.html:69 application/templates/home.html:19
+#: application/templates/login.html:24 application/templates/logs.html:70
+#: application/templates/reset_password.html:19
+#: application/templates/reset_password.html:20
+#: application/templates/settings.html:230 application/templates/signup.html:21
+#: application/templates/user_account.html:15
+msgid "Username"
+msgstr "用户名"
+
+#: application/templates/admin.html:55
+msgid "AutoSend"
+msgstr "使能发送"
+
+#: application/templates/admin.html:56
+#: application/templates/change_password.html:27
+#: application/templates/reset_password.html:26
+#: application/templates/signup.html:33
+#: application/templates/user_account.html:27
+msgid "Email"
+msgstr "Email"
+
+#: application/templates/admin.html:57
+#: application/templates/user_account.html:39
+msgid "Expiration"
+msgstr "有效期"
+
+#: application/templates/admin.html:58
+msgid "Operation"
+msgstr "操作"
+
+#: application/templates/admin.html:65
+msgid "Yes"
+msgstr "是"
+
+#: application/templates/admin.html:65
+msgid "No"
+msgstr "否"
+
+#: application/templates/admin.html:68
+msgid "Never"
+msgstr "永不过期"
+
+#: application/templates/admin.html:70
+#: application/templates/adv_inboundmail.html:26
+#: application/templates/settings.html:58
+#: application/templates/settings.html:170
+#: application/templates/user_account.html:43
+msgid "7 Days"
+msgstr "一星期"
+
+#: application/templates/admin.html:72
+#: application/templates/user_account.html:44
+msgid "1 Month"
+msgstr "1个月"
+
+#: application/templates/admin.html:74
+#: application/templates/user_account.html:45
+msgid "3 Months"
+msgstr "3个月"
+
+#: application/templates/admin.html:76
+#: application/templates/user_account.html:46
+msgid "6 Months"
+msgstr "6个月"
+
+#: application/templates/admin.html:78
+#: application/templates/user_account.html:47
+msgid "1 Year"
+msgstr "1年"
+
+#: application/templates/admin.html:80
+#: application/templates/user_account.html:48
+msgid "2 Years"
+msgstr "2年"
+
+#: application/templates/admin.html:85
+#: application/templates/change_password.html:3
+#: application/templates/change_password.html:13 application/view/admin.py:129
+#: application/view/admin.py:183
+msgid "Edit account"
+msgstr "编辑账号"
+
+#: application/templates/admin.html:89
+#: application/templates/adv_inboundmail.html:54
+#: application/templates/adv_uploadcss.html:31
+#: application/templates/base.html:25 application/templates/webmail.html:22
+msgid "Delete"
+msgstr "删除"
+
+#: application/templates/adv_archive.html:3
+#: application/templates/adv_archive.html:14
+#: application/templates/adv_base.html:57
+#: application/templates/adv_base.html:61
+msgid "Archive"
+msgstr "归档"
+
+#: application/templates/adv_archive.html:15
+msgid "Append hyperlinks for archiving or sharing."
+msgstr "在文章最后附加归档或分享链接。"
+
+#: application/templates/adv_archive.html:40
+msgid "Authorized"
+msgstr "已授权"
+
+#: application/templates/adv_archive.html:42
+msgid "Authorize"
+msgstr "申请授权"
+
+#: application/templates/adv_archive.html:53
+msgid "Email or Username"
+msgstr "邮箱或用户名"
+
+#: application/templates/adv_archive.html:56
+#: application/templates/adv_archive.html:72 application/templates/base.html:54
+#: application/templates/home.html:20 application/templates/login.html:28
+#: application/templates/settings.html:234 application/templates/signup.html:25
+#: application/templates/user_account.html:19
+msgid "Password"
+msgstr "密码"
+
+#: application/templates/adv_archive.html:59
+#: application/templates/adv_archive.html:75 application/templates/base.html:64
+msgid "Verify"
+msgstr "校验"
+
+#: application/templates/adv_archive.html:78
+msgid "client_id"
+msgstr "client_id"
+
+#: application/templates/adv_archive.html:81
+msgid "client_secret"
+msgstr "client_secret"
+
+#: application/templates/adv_archive.html:84
+#: application/templates/settings.html:222
+msgid "Host"
+msgstr "主机"
+
+#: application/templates/adv_archive.html:119
+#: application/templates/adv_dict.html:79
+#: application/templates/adv_inboundmail.html:34
+#: application/templates/book_audiolator.html:113
+#: application/templates/book_translator.html:80
+#: application/templates/settings.html:258
+msgid "Save settings"
+msgstr "保存设置"
+
+#: application/templates/adv_base.html:39
+#: application/templates/adv_base.html:43
+#: application/templates/adv_delivernow.html:8
+msgid "Deliver Now"
+msgstr "现在投递"
+
+#: application/templates/adv_base.html:48
+#: application/templates/adv_base.html:52
+#: application/templates/adv_inboundmail.html:3
+#: application/templates/adv_inboundmail.html:9
+#: application/templates/adv_inboundmail.html:14
+msgid "Inbound Mail"
+msgstr "入站邮件"
+
+#: application/templates/adv_base.html:66
+#: application/templates/adv_base.html:70 application/templates/adv_dict.html:3
+#: application/templates/adv_dict.html:13 application/templates/reader.html:134
+msgid "Dictionary"
+msgstr "词典"
+
+#: application/templates/adv_base.html:75
+#: application/templates/adv_base.html:79
+#: application/templates/adv_import.html:8
+msgid "Import Feeds"
+msgstr "导入订阅列表"
+
+#: application/templates/adv_base.html:84
+#: application/templates/adv_base.html:88
+msgid "Cover Image"
+msgstr "封面图像"
+
+#: application/templates/adv_base.html:93
+#: application/templates/adv_base.html:97
+#: application/templates/adv_uploadcss.html:3
+msgid "Stylesheet"
+msgstr "样式表"
+
+#: application/templates/adv_base.html:102
+#: application/templates/adv_base.html:106
+#: application/templates/adv_calibre_options.html:12
+msgid "Calibre Options"
+msgstr "Calibre配置"
+
+#: application/templates/adv_calibre_options.html:3
+msgid "Calibre options"
+msgstr "Calibre配置"
+
+#: application/templates/adv_calibre_options.html:13
+msgid "Set the parameters for Calibre, in JSON dictionary format."
+msgstr "设置Calibre生成电子书的选项，要求为JSON字典格式。"
+
+#: application/templates/adv_delivernow.html:3
+msgid "Deliver now"
+msgstr "现在投递"
+
+#: application/templates/adv_delivernow.html:9
+msgid "Deliver selected recipes now."
+msgstr "现在推送选择的Recipe"
+
+#: application/templates/adv_delivernow.html:12
+msgid "There are no recipes subscribed"
+msgstr "没有任何被订阅的Recipe"
+
+#: application/templates/adv_delivernow.html:17
+#: application/templates/base.html:100
+msgid "Sep"
+msgstr "Sep"
+
+#: application/templates/adv_delivernow.html:22
+msgid "Select all"
+msgstr "选择全部"
+
+#: application/templates/adv_delivernow.html:23
+msgid "Select none"
+msgstr "取消全部"
+
+#: application/templates/adv_delivernow.html:28
+msgid "Deliver"
+msgstr "推送"
+
+#: application/templates/adv_dict.html:15
+msgid "Set up dictionaries for online reading."
+msgstr "设置在线阅读时使用的词典。"
+
+#: application/templates/adv_dict.html:18
+#: application/templates/adv_dict.html:40
+#: application/templates/adv_dict.html:62
+msgid "Book language"
+msgstr "书本语言"
+
+#: application/templates/adv_dict.html:27
+#: application/templates/adv_dict.html:49
+#: application/templates/adv_dict.html:66
+#: application/templates/book_translator.html:26
+#: application/templates/word_lookup.html:59
+msgid "Engine"
+msgstr "翻译引擎"
+
+#: application/templates/adv_dict.html:33
+#: application/templates/adv_dict.html:55
+#: application/templates/adv_dict.html:72
+#: application/templates/word_lookup.html:65
+msgid "Database"
+msgstr "数据库"
+
+#: application/templates/adv_dict.html:63
+msgid "Other languages"
+msgstr "其他语言"
+
+#: application/templates/adv_dict.html:81
+#: application/templates/word_lookup.html:3
+#: application/templates/word_lookup.html:79
+msgid "Word lookup"
+msgstr "单词查询"
+
+#: application/templates/adv_dict.html:86 application/view/reader.py:29
+#: application/view/reader.py:86
+msgid "Online reading feature has not been activated yet."
+msgstr "在线阅读功能尚未被激活。"
+
+#: application/templates/adv_import.html:3
+#: application/templates/adv_import.html:19
+msgid "Import"
+msgstr "导入"
+
+#: application/templates/adv_import.html:9
+msgid "Import custom rss from an OPML file."
+msgstr "从一个OPML文件中导入自定义RSS。"
+
+#: application/templates/adv_import.html:15
+msgid "Import as fulltext rss by default"
+msgstr "默认导入为全文订阅源"
+
+#: application/templates/adv_import.html:20
+msgid "Download"
+msgstr "下载"
+
+#: application/templates/adv_inboundmail.html:11
+msgid ""
+"To enable the inbound email feature, you also need to configure the "
+"whitelist."
+msgstr "为了使能入站邮件功能，还需要配置白名单列表。"
+
+#: application/templates/adv_inboundmail.html:16
+#: application/templates/book_translator.html:22
+msgid "Disable"
+msgstr "禁止"
+
+#: application/templates/adv_inboundmail.html:17
+msgid "Forward Only"
+msgstr "仅转发"
+
+#: application/templates/adv_inboundmail.html:18
+msgid "Save Only"
+msgstr "仅保存"
+
+#: application/templates/adv_inboundmail.html:19
+msgid "Save and Forward"
+msgstr "保存和转发"
+
+#: application/templates/adv_inboundmail.html:23
+msgid "Email Retention"
+msgstr "邮件保留期"
+
+#: application/templates/adv_inboundmail.html:25
+#: application/templates/settings.html:52
+#: application/templates/settings.html:164
+msgid "1 Day"
+msgstr "一天"
+
+#: application/templates/adv_inboundmail.html:27
+#: application/templates/settings.html:59
+msgid "30 Days"
+msgstr "三十天"
+
+#: application/templates/adv_inboundmail.html:28
+#: application/templates/settings.html:51
+#: application/templates/settings.html:163
+msgid "No limit"
+msgstr "不限制"
+
+#: application/templates/adv_inboundmail.html:36
+msgid "Open webmail"
+msgstr "打开收件箱"
+
+#: application/templates/adv_inboundmail.html:44
+msgid "White List"
+msgstr "邮件白名单"
+
+#: application/templates/adv_inboundmail.html:46
+#, python-format
+msgid ""
+"Emails sent to %(name)sxxx@%(mailHost)s will be forwarded to your kindle "
+"email."
+msgstr "发送至 %(name)sxxx@%(mailHost)s 的邮件将被转发到您的邮箱。"
+
+#: application/templates/adv_inboundmail.html:47
+msgid "Example"
+msgstr "例子"
+
+#: application/templates/adv_inboundmail.html:59
+msgid "Please input mail address"
+msgstr "请输入邮件地址"
+
+#: application/templates/adv_uploadcover.html:3
+msgid "Cover image"
+msgstr "封面图像"
+
+#: application/templates/adv_uploadcover.html:9
+msgid "Upload cover image"
+msgstr "上传封面图像"
+
+#: application/templates/adv_uploadcover.html:10
+msgid "Upload cover images from local with an aspect ratio of approximately 0.65."
+msgstr "从本机上传封面图像，建议宽高比为0.65左右。"
+
+#: application/templates/adv_uploadcover.html:15
+msgid "Rule to pick cover images"
+msgstr "封面图像使用顺序"
+
+#: application/templates/adv_uploadcover.html:17
+msgid "Random"
+msgstr "随机"
+
+#: application/templates/adv_uploadcover.html:18
+#: application/templates/base.html:125
+msgid "Weekday"
+msgstr "周内日"
+
+#: application/templates/adv_uploadcover.html:42
+msgid "Upload/Update"
+msgstr "上传/更新"
+
+#: application/templates/adv_uploadcss.html:22
+msgid "Upload stylesheet"
+msgstr "上传样式表"
+
+#: application/templates/adv_uploadcss.html:23
+msgid "Upload a stylesheet from local (accept utf-8 only)."
+msgstr "从本机上传一个样式表（仅接受utf-8格式）。"
+
+#: application/templates/adv_uploadcss.html:30
+msgid "Upload"
+msgstr "上传"
+
+#: application/templates/autoback.html:3
+msgid "Auto back"
+msgstr "直接返回"
+
+#: application/templates/autoback.html:28
+msgid "Auto back to previous page after 5 seconds"
+msgstr "5秒钟后自动返回上一页"
+
+#: application/templates/autoback.html:29
+#: application/templates/tipsback.html:15
+msgid "Click to back"
+msgstr "点击直接返回"
+
+#: application/templates/base.html:24 application/templates/reader.html:189
+msgid "Confirm Deletion"
+msgstr "确认删除"
+
+#: application/templates/base.html:26
+msgid "Delete (Ctrl for no confirm)"
+msgstr "删除 (按住Ctrl无确认)"
+
+#: application/templates/base.html:27
+msgid "View Source Code"
+msgstr "查看源代码"
+
+#: application/templates/base.html:28
+msgid "Subscribe (Deliver Separately)"
+msgstr "订阅 (单独推送)"
+
+#: application/templates/base.html:29
+msgid "Subscribe"
+msgstr "订阅"
+
+#: application/templates/base.html:30
+msgid "Cannot add this custom rss, Error:"
+msgstr "无法添加这个自定义RSS，错误描述："
+
+#: application/templates/base.html:31
+msgid "Cannot delete this feed, Error:"
+msgstr "无法删除此订阅，错误描述："
+
+#: application/templates/base.html:32
+msgid "Fulltext"
+msgstr "全文RSS"
+
+#: application/templates/base.html:33 application/templates/base.html:43
+msgid "Share"
+msgstr "分享"
+
+#: application/templates/base.html:34 application/templates/reader.html:190
+msgid "Are you sure to delete?"
+msgstr "您确认要删除吗？"
+
+#: application/templates/base.html:35
+msgid "Report to the server that this feed is invalid."
+msgstr "向服务器报告此源已经失效。"
+
+#: application/templates/base.html:36
+msgid "Are you sure to REMOVE ALL CUSTOM RSS?"
+msgstr "您确定需要删除所有的自定义RSS吗？"
+
+#: application/templates/base.html:37
+msgid "Share links, share happiness"
+msgstr "分享链接，分享快乐"
+
+#: application/templates/base.html:38
+msgid "Category"
+msgstr "类别"
+
+#: application/templates/base.html:39
+#: application/templates/book_audiolator.html:58
+#: application/templates/settings.html:148
+msgid "Language"
+msgstr "语言"
+
+#: application/templates/base.html:40
+msgid ""
+"Please write a category in text field if the one you wish is not in the "
+"list."
+msgstr "如果您需要的类别不在列表中，可以在文本框中直接输入。"
+
+#: application/templates/base.html:41
+msgid "Ok"
+msgstr "确定"
+
+#: application/templates/base.html:42
+msgid "Cancel"
+msgstr "取消"
+
+#: application/templates/base.html:44
+msgid "Language code invalid"
+msgstr "语言代码不合法"
+
+#: application/templates/base.html:45
+msgid "Thank you for sharing."
+msgstr "谢谢您的分享。"
+
+#: application/templates/base.html:46 application/templates/reader.html:159
+msgid "Close"
+msgstr "关闭"
+
+#: application/templates/base.html:47
+msgid "Unsubscribe"
+msgstr "退订"
+
+#: application/templates/base.html:48
+msgid "Cannot subscribe this recipe, Error:"
+msgstr "无法订阅这个Recipe，错误描述："
+
+#: application/templates/base.html:49
+msgid "Are you sure to Unsubscribe ({0})?"
+msgstr "您确认要取消订阅 ({0}) 吗？"
+
+#: application/templates/base.html:50
+msgid "Cannot unsubscribe this recipe, Error:"
+msgstr "无法取消订阅这个Recipe，错误描述："
+
+#: application/templates/base.html:51
+msgid "The recipe is already subscribed."
+msgstr "这个Recipe已经被订阅了。"
+
+#: application/templates/base.html:52
+msgid "Website login lnformation"
+msgstr "网站登录信息"
+
+#: application/templates/base.html:53
+msgid "Account"
+msgstr "账号"
+
+#: application/templates/base.html:55
+msgid "Submit"
+msgstr "提交"
+
+#: application/templates/base.html:56
+msgid ""
+"If any field is left blank, the server will clear the saved login "
+"information."
+msgstr "如果任意文本框留空白，则此登录信息将从服务器删除。"
+
+#: application/templates/base.html:57
+msgid "Cannot set the website login information, Error:"
+msgstr "无法设置登录信息，错误描述："
+
+#: application/templates/base.html:58 application/templates/my.html:58
+msgid "Upload custom recipe"
+msgstr "上传自定义 Recipe"
+
+#: application/templates/base.html:59
+msgid "Congratulations"
+msgstr "恭喜"
+
+#: application/templates/base.html:60
+msgid "Thanks"
+msgstr "谢谢"
+
+#: application/templates/base.html:61
+msgid ""
+"Your recipe has been uploaded, and it can be found in the Library "
+"section. If you dont see it, please make sure to switch to the correct "
+"language."
+msgstr "您的Recipe已经上传，可以在本页面的 [新闻源] 区段找到。如果没有，请确认您已经切换到正确的语种。"
+
+#: application/templates/base.html:62
+msgid "Your recipe have been deleted."
+msgstr "您的Recipe已经被删除。"
+
+#: application/templates/base.html:63
+msgid "Kindleify Selection"
+msgstr "选择内容发送到Kindle"
+
+#: application/templates/base.html:65
+msgid "Verified"
+msgstr "已校验"
+
+#: application/templates/base.html:66 application/view/login.py:79
+#: application/view/share.py:157
+msgid "The username does not exist or password is wrong."
+msgstr "用户名不存在或密码错误。"
+
+#: application/templates/base.html:67
+msgid "The file you chosen is not an acceptable type."
+msgstr "您选择的文件不是可以接受的类型。"
+
+#: application/templates/base.html:68
+msgid "The file have been uploaded successfully."
+msgstr "文件已经成功上传。"
+
+#: application/templates/base.html:69 application/templates/library.html:67
+msgid "This feed has been successfully subscribed."
+msgstr "已经成功订阅此新闻源。"
+
+#: application/templates/base.html:70
+msgid "Thank you for your feedback, this feed will be reviewed soon."
+msgstr "谢谢您的反馈，此新闻源将很快会被检视和确认。"
+
+#: application/templates/base.html:71
+msgid "Are you confirming to share the recipe ({0})?"
+msgstr "您确认要分享这个Recipe ({0}) 吗？"
+
+#: application/templates/base.html:72
+msgid "[All]"
+msgstr "[所有分类]"
+
+#: application/templates/base.html:73
+msgid "[By Time]"
+msgstr "[按时间]"
+
+#: application/templates/base.html:74
+msgid "[Random]"
+msgstr "[随机]"
+
+#: application/templates/base.html:75
+msgid "[Uncategoried]"
+msgstr "[未分类]"
+
+#: application/templates/base.html:76
+msgid "There are no links found."
+msgstr "没有找到任何链接。"
+
+#: application/templates/base.html:77
+msgid "Invalid report"
+msgstr "报告新闻源已失效"
+
+#: application/templates/base.html:78
+msgid "Are you confirming that this link is invalid or off the cloud?"
+msgstr "您确认这个链接已经失效或无法链接吗？"
+
+#: application/templates/base.html:79
+msgid "Customize delivery time"
+msgstr "自定义推送时间"
+
+#: application/templates/base.html:80 application/templates/settings.html:72
+msgid "Delivery days"
+msgstr "推送日"
+
+#: application/templates/base.html:81 application/templates/settings.html:74
+msgid "Mon"
+msgstr "一"
+
+#: application/templates/base.html:82 application/templates/settings.html:76
+msgid "Tue"
+msgstr "二"
+
+#: application/templates/base.html:83 application/templates/settings.html:78
+msgid "Wed"
+msgstr "三"
+
+#: application/templates/base.html:84 application/templates/settings.html:80
+msgid "Thu"
+msgstr "四"
+
+#: application/templates/base.html:85 application/templates/settings.html:82
+msgid "Fri"
+msgstr "五"
+
+#: application/templates/base.html:86 application/templates/settings.html:84
+msgid "Sat"
+msgstr "六"
+
+#: application/templates/base.html:87 application/templates/settings.html:86
+msgid "Sun"
+msgstr "日"
+
+#: application/templates/base.html:88
+msgid "Delivery times"
+msgstr "推送时间"
+
+#: application/templates/base.html:89
+msgid "The customized delivery time for the recipe has been successfully saved."
+msgstr "这个Recipe的自定义推送时间已经设定成功。"
+
+#: application/templates/base.html:90
+msgid "The account have been deleted."
+msgstr "这个账号已经被删除。"
+
+#: application/templates/base.html:91 application/view/share.py:147
+msgid "The username or password is empty."
+msgstr "用户名或密码为空。"
+
+#: application/templates/base.html:92 application/view/admin.py:81
+#: application/view/admin.py:165 application/view/admin.py:191
+#: application/view/login.py:220 application/view/login.py:273
+msgid "The two new passwords are dismatch."
+msgstr "两个密码不匹配。"
+
+#: application/templates/base.html:93
+msgid "Password changed successfully."
+msgstr "修改密码成功。"
+
+#: application/templates/base.html:94
+msgid "Account added successfully."
+msgstr "添加账号成功。"
+
+#: application/templates/base.html:95 application/view/login.py:128
+msgid "login required"
+msgstr "需要登录"
+
+#: application/templates/base.html:96
+msgid "Upload cover files successfully."
+msgstr "上传封面图像成功。"
+
+#: application/templates/base.html:97
+msgid ""
+"Total size of the files you selected exceeds 16MB. Please reduce the "
+"image resolution or upload in batches."
+msgstr "您选择的文件总和超过16MB，请减小图像分辨率或分批上传。"
+
+#: application/templates/base.html:98
+#: application/templates/book_translator.html:3
+#: application/templates/book_translator.html:17
+msgid "Bilingual Translator"
+msgstr "双语翻译器"
+
+#: application/templates/base.html:99
+msgid "Upl"
+msgstr "Upl"
+
+#: application/templates/base.html:101
+msgid "Log"
+msgstr "Log"
+
+#: application/templates/base.html:102
+msgid "Emb"
+msgstr "Emb"
+
+#: application/templates/base.html:103
+msgid "Tr"
+msgstr "Tr"
+
+#: application/templates/base.html:104
+msgid "Tts"
+msgstr "Tts"
+
+#: application/templates/base.html:105
+msgid ""
+"The test email has been successfully sent to the following addresses. "
+"Please check your inbox or spam folder to confirm its delivery. Depending"
+" on your email server, there may be a slight delay."
+msgstr "测试邮件已经成功发送到以下地址， 请打开收件箱或垃圾箱确认是否到达，根据服务器不同，可能稍有延迟。"
+
+#: application/templates/base.html:106
+msgid "Translating..."
+msgstr "正在翻译..."
+
+#: application/templates/base.html:107
+msgid "The configuration validation is correct."
+msgstr "配置校验正确。"
+
+#: application/templates/base.html:108 application/templates/logs.html:23
+#: application/templates/logs.html:72 application/templates/my.html:17
+#: application/templates/settings.html:117
+#: application/templates/settings.html:118
+#: application/templates/settings.html:144
+msgid "Title"
+msgstr "书籍标题"
+
+#: application/templates/base.html:109
+#: application/templates/book_audiolator.html:3
+#: application/templates/book_audiolator.html:20
+msgid "Text to Speech"
+msgstr "文本转语音"
+
+#: application/templates/base.html:110
+msgid "Action"
+msgstr "动作"
+
+#: application/templates/base.html:111
+msgid "File"
+msgstr "文件"
+
+#: application/templates/base.html:112
+msgid "Upload Only"
+msgstr "仅上传"
+
+#: application/templates/base.html:113
+msgid "Send"
+msgstr "发送"
+
+#: application/templates/base.html:114 application/templates/logs.html:54
+msgid "There is nothing here."
+msgstr "这里什么都没有。"
+
+#: application/templates/base.html:115
+msgid "Please select a single item."
+msgstr "请选择单独一项。"
+
+#: application/templates/base.html:116 application/templates/reader.html:191
+msgid "Please select at least one item."
+msgstr "请选择至少一项。"
+
+#: application/templates/base.html:117 application/view/admin.py:77
+#: application/view/admin.py:152 application/view/admin.py:189
+#: application/view/extension.py:34 application/view/extension.py:63
+#: application/view/inbound_email.py:470 application/view/inbound_email.py:478
+#: application/view/inbound_email.py:493 application/view/inbound_email.py:514
+#: application/view/login.py:216 application/view/login.py:245
+#: application/view/reader.py:109 application/view/reader.py:126
+#: application/view/share.py:37
+msgid "Some parameters are missing or wrong."
+msgstr "一些参数为空或错误。"
+
+#: application/templates/base.html:118
+msgid "The email has been sent."
+msgstr "邮件已经成功发送。"
+
+#: application/templates/base.html:119 application/templates/webmail.html:29
+msgid "From"
+msgstr "发件人"
+
+#: application/templates/base.html:120 application/templates/logs.html:25
+#: application/templates/logs.html:74 application/templates/webmail.html:30
+msgid "To"
+msgstr "收件人"
+
+#: application/templates/base.html:121 application/templates/webmail.html:31
+msgid "Subject"
+msgstr "主题"
+
+#: application/templates/base.html:122 application/templates/logs.html:22
+#: application/templates/logs.html:71 application/templates/settings.html:117
+#: application/templates/settings.html:118
+#: application/templates/webmail.html:32
+msgid "Time"
+msgstr "时间"
+
+#: application/templates/base.html:123 application/templates/logs.html:24
+#: application/templates/logs.html:73 application/templates/webmail.html:33
+msgid "Size"
+msgstr "大小"
+
+#: application/templates/base.html:124
+msgid "Date type"
+msgstr "日期类型"
+
+#: application/templates/base.html:126
+msgid "Date"
+msgstr "日期"
+
+#: application/templates/base.html:127
+msgid "This setting is prioritized."
+msgstr "此设置具有更高优先级。"
+
+#: application/templates/base.html:128
+msgid "Combine multiple values with commas."
+msgstr "使用逗号分隔多个数值。"
+
+#: application/templates/base.html:153 application/templates/home.html:16
+msgid "Logout"
+msgstr "退出"
+
+#: application/templates/base.html:155 application/templates/home.html:21
+#: application/templates/login.html:3 application/templates/login.html:22
+#: application/templates/login.html:33
+msgid "Login"
+msgstr "登录"
+
+#: application/templates/base.html:157 application/templates/signup.html:3
+#: application/templates/signup.html:19 application/templates/signup.html:43
+msgid "Signup"
+msgstr "注册"
+
+#: application/templates/base.html:177 application/templates/home.html:15
+#: application/templates/my.html:3
+msgid "Feeds"
+msgstr "我的订阅"
+
+#: application/templates/base.html:178 application/templates/settings.html:3
+msgid "Settings"
+msgstr "设置"
+
+#: application/templates/base.html:179 application/templates/logs.html:3
+msgid "Logs"
+msgstr "投递日志"
+
+#: application/templates/base.html:181
+msgid "Advanced"
+msgstr "高级设置"
+
+#: application/templates/base.html:182 application/templates/library.html:3
+msgid "Shared"
+msgstr "网友分享"
+
+#: application/templates/base.html:183 application/templates/reader.html:6
+msgid "Reader"
+msgstr "在线阅读"
+
+#: application/templates/book_audiolator.html:22
+#: application/templates/book_translator.html:19
+msgid "State"
+msgstr "状态"
+
+#: application/templates/book_audiolator.html:24
+msgid "Send Ebook and Audio"
+msgstr "推送电子书和音频"
+
+#: application/templates/book_audiolator.html:25
+msgid "Send Audio only"
+msgstr "仅推送音频"
+
+#: application/templates/book_audiolator.html:26
+msgid "Disable TTS"
+msgstr "禁止TTS"
+
+#: application/templates/book_audiolator.html:30
+msgid "Send Audio To"
+msgstr "推送音频至"
+
+#: application/templates/book_audiolator.html:31
+msgid "Empty to use Kindle_email"
+msgstr "留空则使用kindle_email"
+
+#: application/templates/book_audiolator.html:35
+msgid "TTS Engine"
+msgstr "TTS引擎"
+
+#: application/templates/book_audiolator.html:41
+#: application/templates/book_translator.html:32
+msgid "Api Host"
+msgstr "主机"
+
+#: application/templates/book_audiolator.html:42
+msgid "Empty to use default endpoint"
+msgstr "留空为使用默认端点"
+
+#: application/templates/book_audiolator.html:46
+msgid "Region"
+msgstr "区域"
+
+#: application/templates/book_audiolator.html:53
+#: application/templates/book_translator.html:36
+msgid "Api Key"
+msgstr "Api Key"
+
+#: application/templates/book_audiolator.html:66
+msgid "Voice name"
+msgstr "语音名字"
+
+#: application/templates/book_audiolator.html:73
+msgid "Voice speed"
+msgstr "语音速度"
+
+#: application/templates/book_audiolator.html:75
+msgid "Extra slow"
+msgstr "超级慢"
+
+#: application/templates/book_audiolator.html:76
+msgid "Slow"
+msgstr "慢"
+
+#: application/templates/book_audiolator.html:77
+#: application/templates/book_audiolator.html:87
+#: application/templates/book_audiolator.html:97
+msgid "Medium"
+msgstr "中等"
+
+#: application/templates/book_audiolator.html:78
+msgid "Fast"
+msgstr "快"
+
+#: application/templates/book_audiolator.html:79
+msgid "Extra fast"
+msgstr "超级快"
+
+#: application/templates/book_audiolator.html:83
+msgid "Voice pitch"
+msgstr "语音语调"
+
+#: application/templates/book_audiolator.html:85
+msgid "Extra low"
+msgstr "超级低"
+
+#: application/templates/book_audiolator.html:86
+msgid "Low"
+msgstr "低"
+
+#: application/templates/book_audiolator.html:88
+msgid "High"
+msgstr "高"
+
+#: application/templates/book_audiolator.html:89
+msgid "Extra high"
+msgstr "超级高"
+
+#: application/templates/book_audiolator.html:93
+msgid "Voice volume"
+msgstr "语音音量"
+
+#: application/templates/book_audiolator.html:95
+msgid "Extra soft"
+msgstr "超级低"
+
+#: application/templates/book_audiolator.html:96
+msgid "Soft"
+msgstr "低"
+
+#: application/templates/book_audiolator.html:98
+msgid "Loud"
+msgstr "高"
+
+#: application/templates/book_audiolator.html:99
+msgid "Extra loud"
+msgstr "超级高"
+
+#: application/templates/book_audiolator.html:105
+#: application/templates/book_translator.html:72
+msgid "Apply to all subscribed recipes"
+msgstr "应用到当前所有已订阅Recipe"
+
+#: application/templates/book_audiolator.html:110
+#: application/templates/book_translator.html:77
+msgid ""
+"Note: Enabling this feature will significantly increase consumed CPU "
+"instance hours."
+msgstr "注意：启用此特性会显著增加CPU实例小时数的消耗。"
+
+#: application/templates/book_audiolator.html:119
+#: application/templates/book_translator.html:86
+msgid "Test (Please save settings firstly)"
+msgstr "测试 (请先保存设置)"
+
+#: application/templates/book_audiolator.html:121
+#: application/templates/book_translator.html:88
+msgid "Text"
+msgstr "原文"
+
+#: application/templates/book_audiolator.html:127
+msgid "Your browser does not support the audio element."
+msgstr "您的浏览器不支持audio标签。"
+
+#: application/templates/book_audiolator.html:132
+#: application/templates/book_translator.html:97
+msgid "Test"
+msgstr "测试"
+
+#: application/templates/book_translator.html:21
+msgid "Enable"
+msgstr "启用"
+
+#: application/templates/book_translator.html:37
+msgid "One key per line"
+msgstr "一行一码"
+
+#: application/templates/book_translator.html:40
+#: application/templates/word_lookup.html:51
+msgid "Source language"
+msgstr "源语言"
+
+#: application/templates/book_translator.html:46
+msgid "Target language"
+msgstr "目标语言"
+
+#: application/templates/book_translator.html:52
+msgid "Translation Position"
+msgstr "译文位置"
+
+#: application/templates/book_translator.html:54
+msgid "Below original"
+msgstr "原文下方"
+
+#: application/templates/book_translator.html:55
+msgid "Above original"
+msgstr "原文上方"
+
+#: application/templates/book_translator.html:56
+msgid "Left to original"
+msgstr "原文左边"
+
+#: application/templates/book_translator.html:57
+msgid "Right to original"
+msgstr "原文右边"
+
+#: application/templates/book_translator.html:58
+msgid "Translated text only"
+msgstr "仅保留译文"
+
+#: application/templates/book_translator.html:62
+msgid "Original text style"
+msgstr "原文样式"
+
+#: application/templates/book_translator.html:66
+msgid "Translated text style"
+msgstr "译文样式"
+
+#: application/templates/book_translator.html:92
+msgid "Translation"
+msgstr "译文"
+
+#: application/templates/change_password.html:15
+msgid "Old password"
+msgstr "原密码"
+
+#: application/templates/change_password.html:19
+#: application/templates/reset_password.html:31
+#: application/templates/reset_password.html:32
+msgid "New password"
+msgstr "新密码"
+
+#: application/templates/change_password.html:23
+#: application/templates/reset_password.html:35
+#: application/templates/reset_password.html:36
+#: application/templates/signup.html:29
+#: application/templates/user_account.html:23
+msgid "Confirm password"
+msgstr "确认密码"
+
+#: application/templates/change_password.html:31
+msgid "Share key"
+msgstr "分享密钥"
+
+#: application/templates/change_password.html:37
+msgid "Confirm Change"
+msgstr "确认修改"
+
+#: application/templates/debug_cmd.html:3
+msgid "Debug cmd"
+msgstr "调试命令"
+
+#: application/templates/home.html:3
+msgid "Home"
+msgstr "首页"
+
+#: application/templates/home.html:10 application/templates/login.html:18
+msgid "You are in DEMO mode. Logging out will delete all data."
+msgstr "当前为体验模式，登出账号将马上删除所有数据。"
+
+#: application/templates/home.html:12
+msgid "Sharing Joyful News Every Step of the Way"
+msgstr "分享喜悦，步步欢欣"
+
+#: application/templates/home.html:31
+msgid "Inherited From Calibre"
+msgstr "源自Calibre"
+
+#: application/templates/home.html:34
+#, python-format
+msgid ""
+"Empowered by %(calibre)s, you can easily create e-books on a Python-"
+"supported online platform and seamlessly transfer them to your e-reader "
+"or other reading devices."
+msgstr "借助 %(calibre)s 的强大引擎，现在您可以在各种 Python 托管平台上轻松创建电子书，并直接推送至您的 Kindle 和其他阅读器。"
+
+#: application/templates/home.html:42
+msgid "Share Your Ideas"
+msgstr "分享智慧"
+
+#: application/templates/home.html:45
+#, python-format
+msgid ""
+"With the open-source %(kindleear)s application, you can set up your own "
+"server to deliver daily news feeds to your e-reader and effortlessly "
+"share the service with friends."
+msgstr "使用开源 %(kindleear)s 应用，您可以部署您自己的网站，每天自动抓取全球新闻热点，并支持多账号，可以提供给多位好友同时使用。"
+
+#: application/templates/library.html:50 application/templates/my.html:61
+msgid "Search"
+msgstr "搜索"
+
+#: application/templates/login.html:38 application/view/login.py:197
+#: application/view/login.py:204
+msgid ""
+"The website does not allow registration. You can ask the owner for an "
+"account."
+msgstr "这个网站不支持注册，您可以请求管理员创建账号。"
+
+#: application/templates/logs.html:11
+msgid "Only display last 20 logs"
+msgstr "只显示最后 20 条日志"
+
+#: application/templates/logs.html:26 application/templates/logs.html:75
+msgid "Status"
+msgstr "状态"
+
+#: application/templates/logs.html:58
+msgid "Logs of other users"
+msgstr "其他用户的日志"
+
+#: application/templates/my.html:12 application/templates/settings.html:142
+msgid "Custom RSS"
+msgstr "自定义RSS"
+
+#: application/templates/my.html:23
+msgid "Content Embedded"
+msgstr "全文RSS"
+
+#: application/templates/my.html:27
+msgid "Deliver Separately"
+msgstr "单独推送"
+
+#: application/templates/my.html:46
+msgid "Subscribed"
+msgstr "已订阅"
+
+#: application/templates/my.html:51
+msgid "Library"
+msgstr "新闻源"
+
+#: application/templates/my.html:51
+msgid "get more recipes"
+msgstr "获取更多recipe"
+
+#: application/templates/my.html:68
+msgid "Subscription to selected recipe successful."
+msgstr "已成功订阅您选择的 Recipe"
+
+#: application/templates/my.html:71
+msgid "Bookmarklet"
+msgstr "书签小应用"
+
+#: application/templates/my.html:75
+msgid "Send to Kindle"
+msgstr "发送到Kindle"
+
+#: application/templates/my.html:79
+msgid "Subscribe with KindleEar"
+msgstr "在KindleEar订阅"
+
+#: application/templates/my.html:82
+msgid "Drag and drop this link to your bookmarks"
+msgstr "将链接拖动到书签栏"
+
+#: application/templates/my.html:86
+msgid "Chrome extension"
+msgstr "Chrome扩展程序"
+
+#: application/templates/my.html:87
+msgid "Edge extension"
+msgstr "Edge扩展程序"
+
+#: application/templates/my.html:89
+msgid "Browser extensions also available"
+msgstr "浏览器扩展也有提供"
+
+#: application/templates/reader.html:57
+msgid "Push current book"
+msgstr "推送当前书籍"
+
+#: application/templates/reader.html:63
+msgid "Push current article"
+msgstr "推送当前文章"
+
+#: application/templates/reader.html:71
+msgid "Delete selected books"
+msgstr "删除选择的书本"
+
+#: application/templates/reader.html:77
+msgid "Allow click links"
+msgstr "允许点击链接"
+
+#: application/templates/reader.html:83
+msgid "Top-left dict mode"
+msgstr "左上角激活词典"
+
+#: application/templates/reader.html:89
+msgid "Dark mode"
+msgstr "黑暗模式"
+
+#: application/templates/reader.html:95
+msgid "eInk mode"
+msgstr "墨水屏模式"
+
+#: application/templates/reader.html:101
+msgid "Increase font size"
+msgstr "增大字号"
+
+#: application/templates/reader.html:107
+msgid "Decrease font size"
+msgstr "缩小字号"
+
+#: application/templates/reader.html:113
+msgid "Visualize Touch Regions"
+msgstr "显示触摸区域图示"
+
+#: application/templates/reader.html:119
+msgid "Help"
+msgstr "帮助"
+
+#: application/templates/reader.html:125
+#: application/templates/reader_404.html:135
+msgid "Menu"
+msgstr "菜单"
+
+#: application/templates/reader.html:139
+msgid "Collapse all"
+msgstr "折叠所有"
+
+#: application/templates/reader.html:144
+msgid "Expand all"
+msgstr "展开所有"
+
+#: application/templates/reader.html:149
+#: application/templates/reader_404.html:140
+msgid "Prev"
+msgstr "前一页"
+
+#: application/templates/reader.html:154
+#: application/templates/reader_404.html:143
+msgid "Next page"
+msgstr "下一页"
+
+#: application/templates/reader.html:192
+msgid "Pushed successfully."
+msgstr "推送成功。"
+
+#: application/templates/reader.html:193
+msgid "There are currently no books or articles being read."
+msgstr "当前没有正在阅读的书籍或文章。"
+
+#: application/templates/reset_password.html:3
+#: application/templates/reset_password.html:41
+msgid "Reset password"
+msgstr "重置密码"
+
+#: application/templates/settings.html:14
+msgid "Your account will pause after {0}, please log in again before it expires."
+msgstr "你的投递将于 {0} 自动停止，每次登录后自动延期。"
+
+#: application/templates/settings.html:23
+msgid "Base"
+msgstr "基本设置"
+
+#: application/templates/settings.html:25
+msgid "Auto delivery"
+msgstr "自动推送"
+
+#: application/templates/settings.html:28
+msgid "Recipes and custom RSS"
+msgstr "Recipe和自定义RSS"
+
+#: application/templates/settings.html:29
+msgid "Recipes only"
+msgstr "仅Recipe"
+
+#: application/templates/settings.html:30
+msgid "Disable all"
+msgstr "禁止"
+
+#: application/templates/settings.html:34
+msgid "Kindle E-mail"
+msgstr "Kindle邮箱"
+
+#: application/templates/settings.html:35
+msgid "Seperated by comma"
+msgstr "逗号分隔多个地址"
+
+#: application/templates/settings.html:39
+msgid "Delivery mode"
+msgstr "推送模式"
+
+#: application/templates/settings.html:42
+msgid "Email delivery & online reading"
+msgstr "Email推送 & 在线阅读"
+
+#: application/templates/settings.html:43
+msgid "Email delivery"
+msgstr "Email推送"
+
+#: application/templates/settings.html:44
+msgid "Online reading"
+msgstr "在线阅读"
+
+#: application/templates/settings.html:48
+msgid "Retention days for online books"
+msgstr "在线阅读书籍的保留天数"
+
+#: application/templates/settings.html:48
+msgid "Web shelf"
+msgstr "网络书架"
+
+#: application/templates/settings.html:53
+#: application/templates/settings.html:165
+msgid "2 Days"
+msgstr "两天"
+
+#: application/templates/settings.html:54
+#: application/templates/settings.html:166
+msgid "3 Days"
+msgstr "三天"
+
+#: application/templates/settings.html:55
+#: application/templates/settings.html:167
+msgid "4 Days"
+msgstr "四天"
+
+#: application/templates/settings.html:56
+#: application/templates/settings.html:168
+msgid "5 Days"
+msgstr "五天"
+
+#: application/templates/settings.html:57
+#: application/templates/settings.html:169
+msgid "6 Days"
+msgstr "六天"
+
+#: application/templates/settings.html:64
+msgid "Time zone"
+msgstr "所在时区"
+
+#: application/templates/settings.html:89
+msgid "Delivery time"
+msgstr "推送时间"
+
+#: application/templates/settings.html:97
+msgid "Book type"
+msgstr "投递格式"
+
+#: application/templates/settings.html:104
+msgid "Determines final file size"
+msgstr "决定了生成文件的大小"
+
+#: application/templates/settings.html:104
+msgid "Device type"
+msgstr "设备类型"
+
+#: application/templates/settings.html:113
+msgid "Title format"
+msgstr "标题样式"
+
+#: application/templates/settings.html:116
+msgid "Title Only"
+msgstr "仅标题"
+
+#: application/templates/settings.html:130
+msgid "Remove hyperlinks"
+msgstr "移除链接"
+
+#: application/templates/settings.html:133
+msgid "Do not remove hyperlinks"
+msgstr "不移除链接"
+
+#: application/templates/settings.html:134
+msgid "Remove image links"
+msgstr "移除图像上的链接"
+
+#: application/templates/settings.html:135
+msgid "Remove text links"
+msgstr "移除文本上的链接"
+
+#: application/templates/settings.html:136
+msgid "Remove all hyperlinks"
+msgstr "移除所有链接"
+
+#: application/templates/settings.html:148
+msgid "Sets the lookup dictionary"
+msgstr "设置查词时使用的词典"
+
+#: application/templates/settings.html:160
+msgid "Oldest article"
+msgstr "最旧文章"
+
+#: application/templates/settings.html:174
+msgid "Time format"
+msgstr "时间格式"
+
+#: application/templates/settings.html:187
+msgid "Author format"
+msgstr "标题样式"
+
+#: application/templates/settings.html:204
+msgid "Send Mail Service"
+msgstr "发送邮件服务"
+
+#: application/templates/settings.html:206
+msgid "Service"
+msgstr "服务"
+
+#: application/templates/settings.html:214
+msgid "ApiKey"
+msgstr "ApiKey"
+
+#: application/templates/settings.html:218
+msgid "SecretKey"
+msgstr "SecretKey"
+
+#: application/templates/settings.html:226
+msgid "Port"
+msgstr "端口"
+
+#: application/templates/settings.html:238
+msgid "Save path"
+msgstr "保存路径"
+
+#: application/templates/settings.html:246
+#, python-format
+msgid ""
+"Important: Please activate your kindle firstly, then goto %(personal)s "
+"Page and add %(sender)s to 'Approved Personal Document E-mail List'."
+msgstr ""
+"注意：必须首先注册您的Kindle设备，同时请到亚马逊账户中心 %(personal)s 页面，将 %(sender)s 添加到 "
+"'已认可的发件人电子邮箱列表'。"
+
+#: application/templates/settings.html:246
+msgid "Personal Document Settings"
+msgstr "个人文档设置"
+
+#: application/templates/settings.html:252
+#, python-format
+msgid ""
+"You have not yet set up your email address. Please go to the %(admin)s "
+"page to add your email address firstly."
+msgstr "您尚未设置您的email地址，请先到 %(admin)s 页面添加您的email地址。"
+
+#: application/templates/settings.html:260
+msgid "Send Test Email"
+msgstr "发送测试邮件"
+
+#: application/templates/signup.html:38
+msgid "Invitation code"
+msgstr "邀请码"
+
+#: application/templates/user_account.html:3
+msgid "User account"
+msgstr "账号"
+
+#: application/templates/user_account.html:42
+msgid "Never expire"
+msgstr "永久有效"
+
+#: application/templates/webmail.html:3
+msgid "Webmail"
+msgstr "收件箱"
+
+#: application/templates/webmail.html:17
+msgid "Refresh"
+msgstr "刷新"
+
+#: application/templates/webmail.html:18
+msgid "Read/Unread"
+msgstr "已读/未读"
+
+#: application/templates/webmail.html:19
+msgid "Reply"
+msgstr "回复"
+
+#: application/templates/webmail.html:20
+msgid "Forward"
+msgstr "转发"
+
+#: application/templates/webmail.html:21
+msgid "Fwd as Attach"
+msgstr "作为附件转发"
+
+#: application/templates/word_lookup.html:71
+msgid "Word"
+msgstr "单词"
+
+#: application/view/admin.py:48 application/view/adv.py:441
+#: application/view/settings.py:66 application/view/translator.py:83
+#: application/view/translator.py:167
+msgid "Settings Saved!"
+msgstr "设置已保存!"
+
+#: application/view/admin.py:57 application/view/admin.py:64
+#: application/view/admin.py:91
+msgid "Add account"
+msgstr "添加账号"
+
+#: application/view/admin.py:63 application/view/admin.py:103
+#: application/view/admin.py:135
+msgid "You do not have sufficient privileges."
+msgstr "您没有足够的权限。"
+
+#: application/view/admin.py:79 application/view/login.py:44
+#: application/view/login.py:222
+msgid "The username includes unsafe chars."
+msgstr "用户名包含不安全字符。"
+
+#: application/view/admin.py:83 application/view/login.py:224
+msgid "Already exist the username."
+msgstr "此账号已经存在。"
+
+#: application/view/admin.py:88
+msgid "The password includes non-ascii chars."
+msgstr "密码包含非ASCII字符。"
+
+#: application/view/admin.py:107 application/view/admin.py:132
+#: application/view/admin.py:163 application/view/extension.py:32
+#: application/view/extension.py:61
+msgid "The username '{}' does not exist."
+msgstr "账号名 '{}' 不存在。"
+
+#: application/view/admin.py:123
+msgid "The password will not be changed if the fields are empties."
+msgstr "如果不填写密码，则密码不会被修改。"
+
+#: application/view/admin.py:130 application/view/admin.py:184
+msgid "Change"
+msgstr "修改"
+
+#: application/view/admin.py:181
+msgid "Change success."
+msgstr "修改成功。"
+
+#: application/view/admin.py:194
+msgid "The old password is wrong."
+msgstr "原密码错误。"
+
+#: application/view/admin.py:196
+msgid "Changes saved successfully."
+msgstr "账号设置已更新。"
+
+#: application/view/adv.py:100 application/view/adv.py:101
+#: application/view/adv.py:102 application/view/adv.py:103
+#: application/view/adv.py:104 application/view/adv.py:105
+#: application/view/adv.py:106 application/view/adv.py:107
+#: application/view/adv.py:108 application/view/adv.py:109
+msgid "Append hyperlink '{}' to article"
+msgstr "在每篇文章后附加 '{}' 超链接"
+
+#: application/view/adv.py:100 application/view/adv.py:101
+#: application/view/adv.py:102 application/view/adv.py:103
+#: application/view/adv.py:104
+msgid "Save to {}"
+msgstr "保存到 {}"
+
+#: application/view/adv.py:100
+msgid "evernote"
+msgstr "evernote"
+
+#: application/view/adv.py:101
+msgid "wiz"
+msgstr "为知笔记"
+
+#: application/view/adv.py:102
+msgid "pocket"
+msgstr "pocket"
+
+#: application/view/adv.py:103
+msgid "instapaper"
+msgstr "instapaper"
+
+#: application/view/adv.py:104
+msgid "wallabag"
+msgstr "wallabag"
+
+#: application/view/adv.py:105 application/view/adv.py:106
+#: application/view/adv.py:107 application/view/adv.py:108
+msgid "Share on {}"
+msgstr "分享到 {}"
+
+#: application/view/adv.py:105
+msgid "weibo"
+msgstr "微博"
+
+#: application/view/adv.py:106
+msgid "facebook"
+msgstr "facebook"
+
+#: application/view/adv.py:108
+msgid "tumblr"
+msgstr "tumblr"
+
+#: application/view/adv.py:109
+msgid "Open in browser"
+msgstr "在浏览器打开"
+
+#: application/view/adv.py:110
+msgid "Append qrcode of url to article"
+msgstr "在每篇文章后附加文章链接的二维码"
+
+#: application/view/adv.py:374 application/view/share.py:54
+#: application/view/subscribe.py:247
+msgid "Unknown command: {}"
+msgstr "未知命令：{}"
+
+#: application/view/adv.py:443
+msgid "The format is invalid."
+msgstr "格式非法。"
+
+#: application/view/adv.py:475
+msgid "Authorization Error!<br/>{}"
+msgstr "申请授权过程失败！<br/>{}"
+
+#: application/view/adv.py:496
+msgid "Success authorized by Pocket!"
+msgstr "已经成功获得Pocket的授权！"
+
+#: application/view/adv.py:502
+msgid ""
+"Failed to request authorization of Pocket!<hr/>See details "
+"below:<br/><br/>{}"
+msgstr "申请Pocket授权失败!<hr/>错误信息参考如下：<br/><br/>{}"
+
+#: application/view/adv.py:523
+msgid "The Instapaper service encountered an error. Please try again later."
+msgstr "Instapaper服务器异常，请稍候再试。"
+
+#: application/view/adv.py:536
+msgid "Request type [{}] unsupported"
+msgstr "不支持你请求的命令类型 [{}]"
+
+#: application/view/deliver.py:82 application/view/login.py:169
+#: application/view/share.py:41
+msgid "The username does not exist or the email is empty."
+msgstr "用户名不存在或email为空。"
+
+#: application/view/deliver.py:109
+msgid "The following recipes has been added to the push queue."
+msgstr "下列Recipe已经被添加到推送队列。"
+
+#: application/view/deliver.py:112
+msgid "There are no recipes to deliver."
+msgstr "没有需要推送的Recipe。"
+
+#: application/view/extension.py:69
+msgid "The rules parameter is invalid."
+msgstr "规则参数非法。"
+
+#: application/view/library.py:32
+msgid "Cannot fetch data from {}, status: {}"
+msgstr "无法从 {} 获取数据，状态： {}"
+
+#: application/view/library.py:48 application/view/subscribe.py:235
+#: application/view/subscribe.py:377 application/view/subscribe.py:406
+#: application/view/subscribe.py:413 application/view/translator.py:28
+msgid "The recipe does not exist."
+msgstr "此Recipe不存在。"
+
+#: application/view/login.py:27 application/view/login.py:76
+msgid "Please use {}/{} to login at first time."
+msgstr "初次登录请使用用户名'{}'/密码'{}'。"
+
+#: application/view/login.py:40
+msgid "Username is empty."
+msgstr "账号名为空。"
+
+#: application/view/login.py:42
+msgid "The len of username reached the limit of 25 chars."
+msgstr "用户名超过25字符。"
+
+#: application/view/login.py:80
+msgid "Forgot password?"
+msgstr "忘记密码？"
+
+#: application/view/login.py:148 application/view/login.py:275
+msgid "The token is wrong or expired."
+msgstr "Token码错误或已经逾期。"
+
+#: application/view/login.py:151
+msgid "Please input the correct username and email to reset password."
+msgstr "请输入正确的用户名和Email来重置密码。"
+
+#: application/view/login.py:153
+msgid "The email of account '{name}' is {email}."
+msgstr "账号 '{name}' 的Email为 {email}"
+
+#: application/view/login.py:174
+msgid "Reset password success, Please close this page and login again."
+msgstr "修改密码成功，请关闭此页面重新登录。"
+
+#: application/view/login.py:177
+msgid "The email you input is not associated with this account."
+msgstr "您输入的email不正确。"
+
+#: application/view/login.py:186
+msgid "The link to reset your password has been sent to your email."
+msgstr "重置密码的邮件已经被发送至你的email。"
+
+#: application/view/login.py:187
+msgid "Please check your email inbox within 24 hours."
+msgstr "请在24小时内检查你的email收件箱。"
+
+#: application/view/login.py:218
+msgid "The invitation code is invalid."
+msgstr "邀请码无效。"
+
+#: application/view/login.py:226
+msgid ""
+"Failed to create an account. Please contact the administrator for "
+"assistance."
+msgstr "创建账号失败，请联系管理员请求协助。"
+
+#: application/view/login.py:236
+msgid "Successfully created account."
+msgstr "成功创建账号。"
+
+#: application/view/login.py:247
+msgid "Reset KindleEar password"
+msgstr "重置KindleEar密码"
+
+#: application/view/login.py:248
+msgid "This is an automated email. Please do not reply to it."
+msgstr "这个是自动发送的邮件，请勿直接回复。"
+
+#: application/view/login.py:249
+msgid "You can click the following link to reset your KindleEar password."
+msgstr "你可以点击下面的链接来重置你的KindleEar密码。"
+
+#: application/view/reader.py:88
+msgid "The article is missing?"
+msgstr "文章丢失了？"
+
+#: application/view/reader.py:190 application/view/translator.py:116
+#: application/view/translator.py:200
+msgid "The text is empty."
+msgstr "文本为空。"
+
+#: application/view/reader.py:239
+msgid "No definitions found for '{}'."
+msgstr "未找到“{}”的定义。"
+
+#: application/view/reader.py:240
+msgid "Did you mean?"
+msgstr "您是指？"
+
+#: application/view/reader.py:324 application/view/reader.py:331
+msgid "Failed to push: {}"
+msgstr "推送失败: {}"
+
+#: application/view/reader.py:379
+msgid "Failed to create ebook."
+msgstr "创建电子书失败。"
+
+#: application/view/settings.py:130
+msgid ""
+"You have not yet set up your email address. Please go to the 'Admin' page"
+" to add your email address firstly."
+msgstr "您尚未设置您的email地址，请先到“账号管理”页面添加您的email地址。"
+
+#: application/view/settings.py:209
+msgid "English"
+msgstr "英语"
+
+#: application/view/settings.py:210
+msgid "Chinese"
+msgstr "中文"
+
+#: application/view/settings.py:211
+msgid "French"
+msgstr "法语"
+
+#: application/view/settings.py:212
+msgid "Spanish"
+msgstr "西班牙语"
+
+#: application/view/settings.py:213
+msgid "Portuguese"
+msgstr "葡萄牙语"
+
+#: application/view/settings.py:214
+msgid "German"
+msgstr "德语"
+
+#: application/view/settings.py:215
+msgid "Italian"
+msgstr "意大利语"
+
+#: application/view/settings.py:216
+msgid "Japanese"
+msgstr "日语"
+
+#: application/view/settings.py:217
+msgid "Russian"
+msgstr "俄语"
+
+#: application/view/settings.py:218
+msgid "Turkish"
+msgstr "土耳其语"
+
+#: application/view/settings.py:219
+msgid "Korean"
+msgstr "韩语"
+
+#: application/view/settings.py:220
+msgid "Arabic"
+msgstr "阿拉伯语"
+
+#: application/view/settings.py:221
+msgid "Czech"
+msgstr "捷克语"
+
+#: application/view/settings.py:222
+msgid "Dutch"
+msgstr "荷兰语"
+
+#: application/view/settings.py:223
+msgid "Greek"
+msgstr "希腊语"
+
+#: application/view/settings.py:224
+msgid "Hindi"
+msgstr "印地语"
+
+#: application/view/settings.py:225
+msgid "Malaysian"
+msgstr "马来西亚语"
+
+#: application/view/settings.py:226
+msgid "Bengali"
+msgstr "孟加拉语"
+
+#: application/view/settings.py:227
+msgid "Persian"
+msgstr "波斯语"
+
+#: application/view/settings.py:228
+msgid "Urdu"
+msgstr "乌尔都语"
+
+#: application/view/settings.py:229
+msgid "Swahili"
+msgstr "斯瓦希里语"
+
+#: application/view/settings.py:230
+msgid "Vietnamese"
+msgstr "越南语"
+
+#: application/view/settings.py:231
+msgid "Punjabi"
+msgstr "旁遮普语"
+
+#: application/view/settings.py:232
+msgid "Javanese"
+msgstr "爪哇语"
+
+#: application/view/settings.py:233
+msgid "Tagalog"
+msgstr "他加禄语"
+
+#: application/view/settings.py:234
+msgid "Hausa"
+msgstr "豪萨语"
+
+#: application/view/settings.py:235
+msgid "Thai"
+msgstr "泰语"
+
+#: application/view/settings.py:236
+msgid "Polish"
+msgstr "波兰语"
+
+#: application/view/settings.py:237
+msgid "Romanian"
+msgstr "罗马尼亚语"
+
+#: application/view/settings.py:238
+msgid "Hungarian"
+msgstr "匈牙利语"
+
+#: application/view/settings.py:239
+msgid "Swedish"
+msgstr "瑞典语"
+
+#: application/view/settings.py:240
+msgid "Hebrew"
+msgstr "希伯来语"
+
+#: application/view/settings.py:241
+msgid "Norwegian"
+msgstr "挪威语"
+
+#: application/view/settings.py:242
+msgid "Finnish"
+msgstr "芬兰语"
+
+#: application/view/settings.py:243
+msgid "Danish"
+msgstr "丹麦语"
+
+#: application/view/settings.py:244
+msgid "Ukrainian"
+msgstr "乌克兰语"
+
+#: application/view/settings.py:245
+msgid "Tamil"
+msgstr "泰米尔语"
+
+#: application/view/settings.py:246
+msgid "Marathi"
+msgstr "马拉地语"
+
+#: application/view/settings.py:247
+msgid "Burmese"
+msgstr "缅甸语"
+
+#: application/view/settings.py:248
+msgid "Amharic"
+msgstr "阿姆哈拉语"
+
+#: application/view/settings.py:249
+msgid "Azerbaijani"
+msgstr "阿塞拜疆语"
+
+#: application/view/settings.py:250
+msgid "Kazakh"
+msgstr "哈萨克语"
+
+#: application/view/share.py:60
+msgid "There is no {} email yet."
+msgstr "还没有设置 {} email."
+
+#: application/view/share.py:108 application/view/share.py:133
+#: application/view/share.py:155 application/view/share.py:177
+msgid "Saved to your {} account."
+msgstr "已经成功被保存到你的 {} 账户。"
+
+#: application/view/share.py:111 application/view/share.py:129
+#: application/view/share.py:158 application/view/share.py:179
+msgid "Failed save to {}."
+msgstr "无法保存到 {}."
+
+#: application/view/share.py:112 application/view/share.py:130
+#: application/view/share.py:159 application/view/share.py:180
+msgid "Reason :"
+msgstr "原因："
+
+#: application/view/share.py:121
+msgid "Unauthorized {} account!"
+msgstr "尚未获得Pocket的授权！"
+
+#: application/view/share.py:134
+msgid "See details below:"
+msgstr "下面是一些技术细节："
+
+#: application/view/share.py:157
+msgid "Unknown: {}"
+msgstr "未知: {}"
+
+#: application/view/subscribe.py:78 application/view/subscribe.py:164
+msgid "Duplicated subscription!"
+msgstr "重复的订阅!"
+
+#: application/view/subscribe.py:123
+msgid "The Title or Url is empty."
+msgstr "标题或URL为空。"
+
+#: application/view/subscribe.py:136
+msgid "Failed to fetch the recipe."
+msgstr "抓取Recipe失败。"
+
+#: application/view/subscribe.py:150 application/view/subscribe.py:328
+msgid "Failed to save the recipe. Error:"
+msgstr "保存Recipe失败。错误："
+
+#: application/view/subscribe.py:192
+msgid "The Rss does not exist."
+msgstr "此RSS不存在。"
+
+#: application/view/subscribe.py:275
+msgid "You can only delete the uploaded recipe."
+msgstr "您只能删除你自己上传的Recipe。"
+
+#: application/view/subscribe.py:280
+msgid "The recipe have been subscribed, please unsubscribe it before delete."
+msgstr "此Recipe已经被订阅，请先取消订阅然后再删除。"
+
+#: application/view/subscribe.py:301 application/view/translator.py:49
+#: application/view/translator.py:99 application/view/translator.py:112
+#: application/view/translator.py:135 application/view/translator.py:183
+#: application/view/translator.py:196
+msgid "This recipe has not been subscribed to yet."
+msgstr "此Recipe尚未被订阅。"
+
+#: application/view/subscribe.py:315
+msgid "Can not read uploaded file, Error:"
+msgstr "无法读取上传的文件，错误："
+
+#: application/view/subscribe.py:323
+msgid ""
+"Failed to decode the recipe. Please ensure that your recipe is saved in "
+"utf-8 encoding."
+msgstr "解码Recipe失败，请确保您的Recipe为utf-8编码。"
+
+#: application/view/subscribe.py:346
+msgid "Cannot find any subclass of BasicNewsRecipe."
+msgstr "无法找到BasicNewsRecipe的任何子类。"
+
+#: application/view/subscribe.py:351
+msgid "The recipe is already in the library."
+msgstr "此Recipe已经在新闻源中。"
+
+#: application/view/subscribe.py:384
+msgid "The login information for this recipe has been cleared."
+msgstr "此Recipe的网站登录信息已经被删除。"
+
+#: application/view/subscribe.py:388
+msgid "The login information for this recipe has been saved."
+msgstr "此Recipe的网站登录信息已经保存。"
+
+#: application/view/translator.py:77 application/view/translator.py:160
+msgid "The api key is required."
+msgstr "需要填写api key."

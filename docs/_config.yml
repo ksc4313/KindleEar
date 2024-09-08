@@ -1,0 +1,21 @@
+title: KindleEar
+lang: en
+description: KindleEar is a free webapp that running on Google App Engine, it aggregates feeds and deliver the generated docs to your Kindle periodically.
+
+remote_theme: cdhigh/jekyll-rtd-theme
+
+readme_index:
+  with_frontmatter: true
+
+exclude:
+  - Makefile
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  
+  

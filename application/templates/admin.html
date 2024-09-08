@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block titleTag -%}
+<title>{{ _("Admin") }} - KindleEar</title>
+{% endblock -%}
+
+{% block bodytag -%}
+<body class="admin">
+{% endblock -%}
+
+{% block content -%}
+<div class="main">
+  {% if session.get('role') == 'admin' -%}
+  {% if g.allowSignup -%}
+  <form action="" method="POST" class="pure-form pure-form-aligned">
+    {% if tips -%}
+    <div class="notice-box error">{{tips}}</div>
+    {% endif -%}
+    <fieldset>
+      <legend>{{_("Signup settings")}} <button type="submit" class="h3button">{{_("Save")}}</a></legend>
+      <div class="pure-control-group">
+        <label for="sm_service">{{_("Email service")}}</label>
+        <select class="pure-u-1 pure-u-sm-1-2" name="sm_service">
+          <option value="admin" {% if mailSrv == 'admin' %} selected="selected" {% endif %}>{{_("Same as admin")}}</option>
+          <option value="independent" {% if mailSrv != 'admin' %} selected="selected" {% endif %}>{{_("Independent")}}</option>
+        </select>
+      </div>
+      <div class="pure-control-group">
+        <label for="sm_service">{{_("Signup type")}}</label>
+        <select class="pure-u-1 pure-u-sm-1-2" name="signup_type" id="signup_type" onchange="SetInviteCodesVisualbility()" >
+          <option value="public" {% if signupType == 'public' %} selected="selected" {% endif %}>{{_("Public")}}</option>
+          <option value="oneTimeCode" {% if signupType == 'oneTimeCode' %} selected="selected" {% endif %}>{{_("One time code")}}</option>
+          <option value="permanentCode" {% if signupType == 'permanentCode' %} selected="selected" {% endif %}>{{_("Permanent code")}}</option>
+        </select>
+      </div>
+      <div class="pure-control-group" id="invite_codes_group" style="display:none;">
+        <label>{{_("Invitation codes")}}</label>
+        <textarea class="pure-u-1 pure-u-sm-1-2" name="invite_codes" placeholder="{{_('one code per line')}}">{{inviteCodes}}</textarea>
+      </div>
+    </fieldset>
+  </form>
+  {% endif %}
+  <div class="pure-form">
+    <legend>{{_("Accounts")}} <a href='/account/add' class="h3button">{{_("Add")}}</a></legend>
+    <table class="pure-table pure-table-horizontal usrtb" width="100%">
+      <colgroup>
+        <col width="15%">
+        <col width="15%">
+        <col width="30%">
+        <col width="20%">
+        <col width="20%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>{{_("Username")}}</th>
+          <th>{{_("AutoSend")}}</th>
+          <th>{{_("Email")}}</th>
+          <th>{{_("Expiration")}}</th>
+          <th>{{_("Operation")}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for other in users -%}
+        <tr>
+          <td>{{other.name}}</td>
+          <td>{{_("Yes") if other.cfg('enable_send') else _("No")}}</td>
+          <td>{{other.cfg('email')}}</td>
+          {% if other.expiration_days == 0 -%}
+          <td>{{_("Never")}}</td>
+          {% elif other.expiration_days == 7 -%}
+          <td>{{_("7 Days")}}</td>
+          {% elif other.expiration_days == 30 -%}
+          <td>{{_("1 Month")}}</td>
+          {% elif other.expiration_days == 90 -%}
+          <td>{{_("3 Months")}}</td>
+          {% elif other.expiration_days == 180 -%}
+          <td>{{_("6 Months")}}</td>
+          {% elif other.expiration_days == 365 -%}
+          <td>{{_("1 Year")}}</td>
+          {% elif other.expiration_days == 730 -%}
+          <td>{{_("2 Years")}}</td>
+          {% else -%}
+          <td>{{other.expiration_days}} Days</td>
+          {% endif -%}
+          <td>
+            <button class="additional-btn btn-B" title="{{_('Edit account')}}"><a href="/account/change/{{other.name}}"><i class="iconfont icon-edit"></i></a></button>
+            {% if other.name == adminName -%}
+            <button class="additional-btn btn-A additional-btn-disabled"><i class="iconfont icon-delete"></i></button>
+            {% else -%}
+            <button class="additional-btn btn-A" title="{{_('Delete')}}" onclick="DeleteAccount('{{other.name}}')"><i class="iconfont icon-delete"></i></button>
+            {% endif -%}
+          </td>
+        </tr>
+        {% endfor -%}
+      </tbody>
+    </table>
+  </div>
+  {% endif -%}
+</div>
+{% endblock -%}
+{% block js -%}
+<script type="text/javascript">
+$(document).ready(function() {
+  SetInviteCodesVisualbility();
+});
+function SetInviteCodesVisualbility() {
+  var type_ = $('#signup_type').val();
+  if (type_ == 'public') {
+    $('#invite_codes_group').hide();
+  } else {
+    $('#invite_codes_group').show();
+  }
+}
+</script>
+{% endblock -%}
