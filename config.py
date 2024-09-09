@@ -8,8 +8,8 @@
 # 程序会优先使用环境变量，只有环境变量不存在时才使用此文件中的数值。
 #
 
-APP_ID = "kindleear-basketballpan"
-APP_DOMAIN = "https://kindleear-basketballpan.appspot.com/"
+APP_ID = "kindleear"
+APP_DOMAIN = "https://kindleear.appspot.com/"
 
 #Need for google taskqueue only, Refers to <https://cloud.google.com/appengine/docs/locations>
 #Find it at Upper right corner of <https://console.cloud.google.com/appengine?project=your_app_id>
